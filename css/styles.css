@@ -47,9 +47,9 @@ h1 {
     border: 1px solid grey;
 }
 
-h1 span {
+/* h1 span {
  text-align: right;
-}
+} */
 
 nav {
     display: flex;
@@ -137,7 +137,7 @@ nav {
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
+  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 1.5em;
@@ -206,7 +206,7 @@ nav {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
+  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -299,7 +299,7 @@ nav {
   font-size: 2rem;
   font-weight: 900;
   font-kerning: normal;
-  -webkit-text-stroke: 1.2px #000;
+  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -397,7 +397,7 @@ h2 a {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
+  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -839,7 +839,7 @@ h2 a {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
+  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 1.5em;
@@ -858,7 +858,7 @@ h2 a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
+  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -878,7 +878,7 @@ h2 a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
+  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -898,7 +898,7 @@ h2 a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
+  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -1129,7 +1129,7 @@ body {
 }
 @media (max-width: 700px) {
 body {
-  font-size: 0.7em;
+  font-size: 0.7rem;
 }
 
 header {
@@ -1160,7 +1160,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: bolder;
     color: brown;
     background-color: bisque;
@@ -1308,7 +1308,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
+  font-size: 1.45rem;
   font-weight: bolder;
   color: brown;
   background-color: bisque;
@@ -1329,8 +1329,7 @@ nav {
   border: 1px solid grey;
   position: fixed;
   z-index: 1;
-  height: 400px;
-  width: 70px;
+  height: 300px;
   top: 80px;
   left: 25px;
 }
@@ -1342,10 +1341,11 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-grow: 1;
-  padding: 2.5px;
+  padding: 3px;
 }
+
 
 .navlist li:hover .dropdown-content {
   display: none;
@@ -1463,13 +1463,13 @@ nav {
 
 @media (max-width: 450px) {
   h1 span {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 380px) {
   h1 span {
-    font-size: 0.7rem;
+    font-size: 1.05rem;
   }
 
 .cardCategoria {
