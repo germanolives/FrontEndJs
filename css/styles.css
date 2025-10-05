@@ -6,7 +6,6 @@
     /* border: 1px solid black; */
 }
 
-
 header {
     display: grid;
     grid-template-columns: 90px 1fr;
@@ -35,45 +34,41 @@ header {
 }
 
 h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    font-weight: bolder;
-    color: brown;
-    background-color: bisque;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: brown;
+  background-color: bisque;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid grey;
 }
 
-/* h1 span {
- text-align: right;
-} */
-
 nav {
-    display: flex;
-    background-color: brown;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
+  display: flex;
+  background-color: brown;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid grey;
 }
 
 .navlist {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-grow: 1;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
 }
 
 .navlist a {
-    color: aqua;
-    text-decoration: none;
+  color: aqua;
+  text-decoration: none;
 }
 
 .navlist a:hover {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .navlist li .dropdown-content {
@@ -96,7 +91,6 @@ nav {
 .dropdown-content a{
   font-size: small;
 }
-
 
 .categorias {
   display: flex;
@@ -137,7 +131,6 @@ nav {
   text-decoration: none;
   font-size: 2.5rem;
   font-weight: 900;
-  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 1.5em;
@@ -162,7 +155,6 @@ nav {
 .cardCategoria:hover {
   transform: scale(1.04);
 }
-
 
 .aceites {
   display: flex;
@@ -196,9 +188,6 @@ nav {
   border: 1px solid hsl(0, 0%, 50%);
 }
 
-
-
-
 .cardOil {
   display: flex;
   justify-content: center;
@@ -206,7 +195,6 @@ nav {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 900;
-  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -299,7 +287,6 @@ nav {
   font-size: 2rem;
   font-weight: 900;
   font-kerning: normal;
-  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -397,7 +384,6 @@ h2 a {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 900;
-  /* -webkit-text-stroke: 1.2px #000; */
   color: white;
   text-align: center;
   margin: 2em;
@@ -499,7 +485,6 @@ h2 a {
   color: black;
 }
 
-
 .chat {
   display: flex;
   flex-direction: column;
@@ -565,8 +550,9 @@ h2 a {
 .mainContact {
   display: flex;
   justify-content: center;
-  gap: 3em;
   align-items: center;
+  gap: 3em;
+  
 }
 
 
@@ -608,7 +594,6 @@ h2 a {
   border: 1px solid grey;
   outline: none;
 }
-
 
 .contact textarea {
   border-radius: 5px;
@@ -833,82 +818,27 @@ h2 a {
 @media (max-width: 1135px) {
 
 .cardCategoria {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 900;
-  /* -webkit-text-stroke: 1.2px #000; */
-  color: white;
-  text-align: center;
-  margin: 1.5em;
   height: 200px;
   width: 200px;
-  background-color: brown;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
 }
 
 .cardOil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 900;
-  /* -webkit-text-stroke: 1.2px #000; */
-  color: white;
-  text-align: center;
-  margin: 2em;
   height: 160px;
   width: 160px;
-  background-color: brown;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-  background-size: contain;
 }
 
 .cardFrutosSecos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
   font-size: 1.5rem;
   font-weight: 900;
-  /* -webkit-text-stroke: 1.2px #000; */
-  color: white;
-  text-align: center;
-  margin: 2em;
   height: 160px;
   width: 160px;
-  background-color: brown;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-  background-size: contain;
 }
 
 .cardSemillas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 900;
-  /* -webkit-text-stroke: 1.2px #000; */
-  color: white;
-  text-align: center;
-  margin: 2em;
   height: 160px;
   width: 160px;
-  background-color: brown;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-  background-size: contain;
 }
 }
 
@@ -918,127 +848,37 @@ body {
 }
 
 header {
-    display: grid;
     grid-template-columns: 70px 1fr;
     grid-template-rows: 45px 25px;
-    gap: 0.3em;
-    margin-top: 0.25rem;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    background-color:white;
-}
-
-.logo {
-    grid-row: 1 / 3;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
-    background-image: url(../img/logo.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center ;
-    background-position-y: center;
-}
-
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    font-weight: bolder;
-    color: brown;
-    background-color: bisque;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
-}
-
-nav {
-    display: flex;
-    background-color: brown;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
 }
 
 .categorias h2 {
-  width: 210px;
-  text-align: center;
-  position: absolute;
   top: -30px;
   left: -0.5px;
-  background-color:aquamarine;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .aceites h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -30px;
   left: -0.5px;
-  background-color: aqua;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .frutosSecos h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -30px;
   left: -0.5px;
-  background-color: bisque;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .semillas h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -30px;
   left: -0.5px;
-  background-color: burlywood;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .ubic {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height:430px;
   width: 400px;
-  border: 1px solid grey;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background-color:antiquewhite;
-}
-
-.contact {
-  border: 1px solid hsl(0, 0%, 50%);
-  border-radius: 10px;
-  background-color:antiquewhite;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  margin: 15px;
-  width: 300px;
-  height: 430px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
 }
 
 .local .map {
   width: 398px;
-  height: 250px;
-  border: 1px solid grey;
 }
-
 
 }
 
@@ -1047,229 +887,91 @@ body {
   font-size: 0.75rem;
 }
 
-
 .categorias h2 {
-  width: 210px;
-  text-align: center;
-  position: absolute;
   top: -25.5px;
   left: -0.5px;
-  background-color:aquamarine;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .aceites h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -25.5px;
   left: -0.5px;
-  background-color: aqua;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .frutosSecos h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -25.5px;
   left: -0.5px;
-  background-color: bisque;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .semillas h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -25.5px;
   left: -0.5px;
-  background-color: burlywood;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
-}
-
-.ubic {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height:430px;
-  width: 300px;
-  border: 1px solid grey;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background-color:antiquewhite;
 }
 
 .contact {
-  border: 1px solid hsl(0, 0%, 50%);
-  border-radius: 10px;
-  background-color:antiquewhite;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  margin: 15px;
-  width: 280px;
-  height: 430px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
+  width: 280px;;
+}
+
+.ubic {
+  width: 300px;
 }
 
 .local .map {
   width: 298px;
   height: 265px;
-  border: 1px solid grey;
 }
 
 }
+
 @media (max-width: 700px) {
 body {
   font-size: 0.7rem;
 }
 
 header {
-    display: grid;
     grid-template-columns: 60px 1fr;
     grid-template-rows: 60px 25px;
-    gap: 0.3em;
-    margin-top: 0.25rem;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    background-color:white;
 }
 
 .logo {
     grid-row: 1 / 2;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
-    background-image: url(../img/logo.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center ;
-    background-position-y: center;
-}
-
-h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    font-weight: bolder;
-    color: brown;
-    background-color: bisque;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
 }
 
 nav {
   grid-column: 1 / 3;
-    display: flex;
-    background-color: brown;
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid grey;
 }
 
-
-
-
 .categorias h2 {
-  width: 210px;
-  text-align: center;
-  position: absolute;
   top: -23.5px;
   left: -0.9px;
-  background-color:aquamarine;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .aceites h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -23.5px;
   left: -0.9px;
-  background-color: aqua;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .frutosSecos h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -23.5px;
   left: -0.9px;
-  background-color: bisque;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .semillas h2 {
-  width: 200px;
-  text-align: center;
-  position: absolute;
   top: -23.5px;
   left: -0.9px;
-  background-color: burlywood;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 }
-
 
 @media (max-width: 670px) {
 .mainContact {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 4em;
 }
 
-.contact {
-  border: 1px solid hsl(0, 0%, 50%);
-  border-radius: 10px;
-  background-color:antiquewhite;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  margin: 15px;
-  width: 350px;
-  height: 430px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-}
-
 .ubic {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height:430px;
   width: 463px;
-  border: 1px solid grey;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  background-color:antiquewhite;
 }
 
-.local .map {
-  width: 462.5px;
-  height: 250px;
-  border: 1px solid grey;
-}
 
 }
 
@@ -1277,19 +979,12 @@ nav {
 
 header {
     z-index: 1;
-    display: grid;
     grid-template-columns: 70px 1fr;
     grid-template-rows: 70px;
-    gap: 0.3em;
-    margin-top: 0.25rem;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    background-color:white;
     position: relative;
 }
 
 .logo {
-  grid-row: 1 / 2;
   position: fixed;
   top: 4.3px;
   left: 24px;
@@ -1302,50 +997,26 @@ header {
   border: 1px solid grey;
 }
 
-
 h1 {
   grid-column: 2 / 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1.45rem;
-  font-weight: bolder;
-  color: brown;
-  background-color: bisque;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  border: 1px solid grey;
 }
 
-
 nav {
-  display:flex;
   flex-direction: column;
-  background-color: brown;
-  border-radius: 5px;
   justify-content: center;
   align-items: start;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  border: 1px solid grey;
   position: fixed;
   z-index: 1;
   height: 350px;
   top: 80px;
   left: 25px;
 }
- 
-
 
 .navlist {
-  list-style: none;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-grow: 1;
   padding: 3px;
 }
-
 
 .navlist li:hover .dropdown-content {
   display: none;
@@ -1354,110 +1025,53 @@ nav {
 }
 
 .categorias {
-  display: flex;
-  flex-direction: column;
-  background-color:aquamarine;
   margin: 4em 3em 6em 10em;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
-  border: 1px solid hsl(0, 0%, 50%);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
-
 
 .categorias h2 {
   width: 150px;
-  text-align: center;
-  position: absolute;
   top: -23.5px;
   left: auto;
-  background-color:aquamarine;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .aceites {
-  display: flex;
-  flex-direction: column;
-  background-color:aqua;
   margin: 6em 5em 6em 12em;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
-  border: 1px solid hsl(0, 0%, 50%);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
 .aceites h2 {
   width: 140px;
-  text-align: center;
-  position: absolute;
   top: -23.5px;
   left: auto;
-  background-color: aqua;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .frutosSecos {
-  display: flex;
-  flex-direction: column;
-  background-color: bisque;
   margin: 6em 5em 6em 12em;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
-  border: 1px solid hsl(0, 0%, 50%);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
 .frutosSecos h2 {
   width: 140px;
-  text-align: center;
-  position: absolute;
   top: -23.5px;
   left: auto;
-  background-color: bisque;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .semillas {
-  display: flex;
-  flex-direction: column;
-  background-color: burlywood;
   margin: 6em 5em 6em 12em;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
-  border: 1px solid hsl(0, 0%, 50%);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
 .semillas h2 {
   width: 140px;
-  text-align: center;
-  position: absolute;
   top: -23.5px;
   left: auto;
-  background-color: burlywood;
-  border-radius: 10px 10px 0px 0px;
-  border: 1px solid hsl(0, 0%, 50%);
 }
 
 .chat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   bottom: 35px;
   left: 30px;  
 }
-
 
 }
 
@@ -1473,83 +1087,27 @@ nav {
   }
 
 .cardCategoria {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
   font-size: 2rem;
-  font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
-  color: white;
-  text-align: center;
-  margin: 1.5em;
   height: 175px;
   width: 175px;
-  background-color: brown;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-  background-size: contain;
 }
 
 .cardOil {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
-  color: white;
-  text-align: center;
-  margin: 2em;
   height: 125px;
   width: 125px;
-  background-color: brown;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-  background-size: contain;
 }
 
 .cardFrutosSecos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
-  color: white;
-  text-align: center;
-  margin: 2em;
   height: 125px;
   width: 125px;
-  background-color: brown;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-  background-size: contain;
 }
 
 .cardSemillas {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 900;
-  -webkit-text-stroke: 1.2px #000;
-  color: white;
-  text-align: center;
-  margin: 2em;
   height: 125px;
   width: 125px;
-  background-color: brown;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-  background-size: contain;
 }
 
 }
