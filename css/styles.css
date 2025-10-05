@@ -604,10 +604,10 @@ h2 a {
   border-radius: 5px;
   border: 1px solid grey;
   outline: none;
+  resize: none;
 }
 
-.contact button {
-  margin-top: 0px;
+button {
   padding: 0.5em 1.5em;
   font-size: large;
 }
@@ -697,8 +697,7 @@ h2 a {
   font-size: large;
 }
 
-.login button {
-  margin-top: 25px;
+button {
   padding: 0.5em 1.5em;
   font-size: large;
   background-color: hsl(0, 0%, 90%);
@@ -731,22 +730,13 @@ h2 a {
   font-size: large;
 }
 
-
 .inputDos {
   display: flex;
   justify-content: space-between;
   width: 296px;
 }
 
-/* 
 .register button {
-  margin-top: 0px;
-  padding: 0.5em 1.5em;
-  font-size: large;
-} */
-
-.register button {
-  /* margin-top: 25px; */
   padding: 0.5em 1.5em;
   font-size: large;
   background-color: hsl(0, 0%, 90%);
@@ -772,8 +762,6 @@ h2 a {
   justify-content: center;
   align-items: center;
   margin: 20px;
-  gap: 1.5em;
-
 }
 
 .cardTextNosotros {
@@ -789,12 +777,12 @@ h2 a {
   background-image: url(../img/fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 350px;
   width: 525px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   transition: transform 0.3s ease, cursor 0.3s ease;
-
 }
 
 .cardTextNosotros:hover {
@@ -816,6 +804,7 @@ h2 a {
   border-radius: 10px;
   transition: transform 0.3s ease, cursor 0.3s ease;
   transform: scale(1.01);
+  overflow: auto;
   
 }
 
@@ -993,11 +982,11 @@ nav {
 }
 
 .ubic {
-  width: 463px;
+  width: 440px;
 }
 
 .local .map {
-  width: 462.5px;
+  width: 438px;
   height: 250px;
   border: 1px solid grey;
 }
@@ -1062,6 +1051,7 @@ main {
 
 .categorias {
   border-radius: 10px;
+  margin: 3em 1em 6em;
 }
 
 .categorias h2 {
@@ -1070,8 +1060,19 @@ main {
   left: auto;
 }
 
+.cardCategoria {
+  width: 250px;
+  height: 250px;
+}
+
 .aceites {
   border-radius: 10px;
+  margin: 3em 2.5em 6em;
+}
+
+.cardOil {
+  width: 200px;
+  height: 200px;
 }
 
 .aceites h2 {
@@ -1082,6 +1083,7 @@ main {
 
 .frutosSecos {
   border-radius: 10px;
+  margin: 3em 2.5em 6em;
 }
 
 .frutosSecos h2 {
@@ -1090,8 +1092,14 @@ main {
   left: auto;
 }
 
+.cardFrutosSecos {
+  width: 200px;
+  height: 200px;
+}
+
 .semillas {
   border-radius: 10px;
+  margin: 3em 2.5em 6em;
 }
 
 .semillas h2 {
@@ -1100,13 +1108,15 @@ main {
   left: auto;
 }
 
-
+.cardSemillas {
+  width: 200px;
+  height: 200px;
+}
 
 .chat {
   top: 435px;
   left: 30px;  
 }
-
 
 .contact {
   width: 280px;
@@ -1120,29 +1130,71 @@ main {
   width: 299px;
 }
 
+
+
 }
 
-@media (max-width: 450px) {
-  h1 span {
-    font-size: 1.2rem;
-  }
+
+@media (max-width: 500px) {
+h1 span {
+  font-size: 1.05rem;
 }
 
-@media (max-width: 380px) {
-  h1 span {
-    font-size: 1.05rem;
-  }
+.contact {
+  width: 230px;
+}
+
+.contact textarea {
+  width: 200px;
+}
+
+.input {
+  width: 200px;
+}
+.ubic {
+  width: 230px;
+}
+
+.local .map {
+  width: 228px;
+}
+
+.contactButton button {
+  width: 80px;
+  height: 30px;
+  padding: 0;
+}
+
+.login {
+  width: 230px;
+}
+
+.nuevaCuenta {
+  width: 230px;
+}
+
+.register {
+  width: 230px;
+}
+
+.inputDos {
+  width: 200px;
+}
+
+.inputDos .input {
+  width: 100px;
+}
 
 .cardCategoria {
   font-size: 2rem;
-  height: 175px;
-  width: 175px;
+  height: 200px;
+  width: 200px;
 }
 
 .cardOil {
   font-size: 1.5rem;
-  height: 125px;
-  width: 125px;
+  height: 150px;
+  width: 150px;
 }
 
 .cardFrutosSecos {
@@ -1157,6 +1209,18 @@ main {
   width: 125px;
 }
 
+.cardTextNosotros {
+  background-position-x: -160px ;
+}
+
+}
+
+
+
+@media (max-width: 379px) {
+html {
+  display: none;
+}
 }
 
 
