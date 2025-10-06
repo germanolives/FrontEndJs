@@ -1354,13 +1354,12 @@ nav {
 }
 
 .nosotros {
-  margin: 0.7em 0.8em 4em 0.8em;
+  margin: 0.7em 0.8em 3.05em 0.8em;
 }
 
 .music {
   width: 360px;
-  margin-top: 4.5em;
-  margin-bottom: 4.6em;
+
 }
 
 .footerLogin .upDown {
@@ -1473,8 +1472,6 @@ h1 span {
 
 .music {
   width: 230px;
-  margin-top: 4.5em;
-  margin-bottom: 4.6em;
 }
 audio {width: 190px;}
 
