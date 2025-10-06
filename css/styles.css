@@ -664,7 +664,7 @@ button {
   border-radius: 10px;
   background-color: aqua;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-bottom: 15px;
@@ -680,8 +680,10 @@ button {
   background-color: hsl(0, 0%, 90%);
   border: 1px solid grey;
   border-radius: 5px;
-  padding: 0.25em 0.75em;
+  padding: 0.55em 1em;
+
   color: black;
+
 }
 
 .nuevaCuenta a:hover {
