@@ -824,14 +824,14 @@ body {
 
 /*OFFERS HTML ---------------------------------------------------------------------------------------------------------------*/
 
-.productos {
+.ofertas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 
-.frutoseco {
+.cardOferta {
   border: 1px solid grey;
   border-radius: 10px;
   background-color: rgb(127, 255, 212);
@@ -846,22 +846,22 @@ body {
   transition: transform 0.3s ease, cursor 0.3s ease;
 }
 
-.frutoseco img {
+.cardOferta img {
   width: 150px;
   height: 150px;
   border-radius: 5px;
 }
 
-.frutoseco:hover {
+.cardOferta:hover {
   transform: scale(1.02);
   cursor: grab;
 }
 
-.frutoseco:nth-child(2) {
+.cardOferta:nth-child(2) {
   background-color: aqua;
 }
 
-.frutoseco:last-child {
+.cardOferta:last-child {
   background-color:antiquewhite;
 }
 
@@ -949,22 +949,22 @@ header {
 }
 
 .categorias h2 {
-  top: -30px;
+  top: -33px;
   left: -0.5px;
 }
 
 .aceites h2 {
-  top: -30px;
+  top: -33px;
   left: -0.5px;
 }
 
 .frutosSecos h2 {
-  top: -30px;
+  top: -33px;
   left: -0.5px;
 }
 
 .semillas h2 {
-  top: -30px;
+  top: -33px;
   left: -0.5px;
 }
 
@@ -976,13 +976,13 @@ header {
   width: 398px;
 }
 
- .frutoseco {
+ .cardOferta {
   margin: 15px;
   width: 275px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.productos img {
+.ofertas img {
   width: 7.84rem;
   height: 7.84rem;
 }
@@ -1007,7 +1007,7 @@ header {
   gap: 1em;
 }
 
- .frutoseco {
+ .cardOferta {
   margin: 15px;
   width: 220px;
   height: 340px;
@@ -1036,7 +1036,7 @@ header {
 .compra input {
   width: 47px;
 }
-.productos img {
+.ofertas img {
   width: 5.6rem;
   height: 5.6rem;
 }
@@ -1053,22 +1053,22 @@ header {
 }
 
 .categorias h2 {
-  top: -25.5px;
+  top: -33px;
   left: -0.5px;
 }
 
 .aceites h2 {
-  top: -25.5px;
+  top: -33px;
   left: -0.5px;
 }
 
 .frutosSecos h2 {
-  top: -25.5px;
+  top: -33px;
   left: -0.5px;
 }
 
 .semillas h2 {
-  top: -25.5px;
+  top: -33px;
   left: -0.5px;
 }
 
@@ -1085,7 +1085,7 @@ header {
   height: 265px;
 }
 
- .frutoseco {
+ .cardOferta {
   width: 170px;
   height: 270px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -1110,15 +1110,7 @@ header {
   gap: 3%;
 }
 
-.libertinus-keyboard-regular {
-  font-family: "Libertinus Keyboard", system-ui;
-  font-size: 15px;
-  font-weight: 500;
-  font-style: normal;
-  margin: 10px;
-}
-
-.productos img {
+.ofertas img {
   width: 4.48rem;
   height: 4.48rem;
 }
@@ -1174,7 +1166,7 @@ nav {
 }
 
 .categorias h2 {
-  top: -23.5px;
+  top: -33px;
   left: -0.9px;
 }
 
@@ -1184,12 +1176,12 @@ nav {
 }
 
 .frutosSecos h2 {
-  top: -23.5px;
+  top: -33px;
   left: -0.9px;
 }
 
 .semillas h2 {
-  top: -23.5px;
+  top: -33px;
   left: -0.9px;
 }
 
@@ -1223,6 +1215,10 @@ nav {
 }
 
 @media (max-width: 598px) {
+
+main {
+  margin: 2em 1.7em 2em 6.4em;
+}
 
 
 header {
@@ -1273,9 +1269,6 @@ nav {
 }
 
 
-main {
-  margin: 0.55em 2.2em 3em 9em;
-}
 
 .categorias {
   border-radius: 10px;
@@ -1284,7 +1277,7 @@ main {
 
 .categorias h2 {
   width: 150px;
-  top: -24.5px;
+  top: -33.5px;
   left: auto;
 }
 
@@ -1305,7 +1298,7 @@ main {
 
 .aceites h2 {
   width: 140px;
-  top: -23.5px;
+  top: -33.5px;
   left: auto;
 }
 
@@ -1316,7 +1309,7 @@ main {
 
 .frutosSecos h2 {
   width: 140px;
-  top: -23.5px;
+  top: -33.5px;
   left: auto;
 }
 
@@ -1336,7 +1329,7 @@ main {
 
 .semillas h2 {
   width: 140px;
-  top: -23.5px;
+  top: -33.5px;
   left: auto;
 }
 
@@ -1384,7 +1377,7 @@ main {
   display: none;
 }
 
- .frutoseco {
+ .cardOferta {
   width: 220px;
 }
 
@@ -1491,7 +1484,7 @@ audio {width: 190px;}
 }
 
 @media (max-width: 430px) {
- .frutoseco {
+.cardOferta {
   width: 170px;
 }
 
@@ -1502,6 +1495,8 @@ audio {width: 190px;}
 .compra {
   width: 15em;
 }
+
+
 
 }
 
