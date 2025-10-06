@@ -819,6 +819,96 @@ body {
   overflow: auto; 
 }
 
+
+/*OFFERS HTML ---------------------------------------------------------------------------------------------------------------*/
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.frutoseco {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: rgb(127, 255, 212);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  width: 350px;
+  height: 430px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+}
+
+.frutoseco img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.frutoseco:hover {
+  transform: scale(1.02);
+  cursor: grab;
+}
+
+.frutoseco:nth-child(2) {
+  background-color: aqua;
+}
+
+.frutoseco:last-child {
+  background-color:antiquewhite;
+}
+
+.precio  {
+  display: flex;
+  height: 62px;
+  font-size: 50px;
+  align-items: center;
+  gap: 3%;
+}
+
+.condicionesPrecio {
+  font-size: 20%;
+  width: 15px;
+  color: brown;
+  width: fit-content;
+  text-align: left;
+}
+
+.descripcion {
+  background-color: rgba(227, 213, 195, 0.5);
+  font-size: smaller;
+  padding: 5px;
+  margin: 10px;
+  width: 95%;
+  height: fit-content;
+  text-align:center;
+  border-radius: 5px; 
+}
+
+.compra {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.compra button {
+  padding: 0cqmin 8px;
+  color: red;
+}
+
+
+
+
+
+
+
 @media (max-width: 1135px) {
 
 .cardCategoria {
@@ -884,11 +974,69 @@ header {
   width: 398px;
 }
 
+ .frutoseco {
+  margin: 15px;
+  width: 275px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.productos img {
+  width: 7.84rem;
+  height: 7.84rem;
+}
+
+
+.precio  {
+  display: flex;
+  height: 62px;
+  font-size: 42px;
+  align-items: center;
+  gap: 3%;
+}
+
+.compra input {
+  width: 100px;
+}
+
 }
 
 @media (max-width: 896px) {
 .mainContact {
   gap: 1em;
+}
+
+ .frutoseco {
+  margin: 15px;
+  width: 220px;
+  height: 340px;
+}
+
+.descripcion {
+  background-color: rgba(227, 213, 195, 0.5);
+  font-size: 11px;
+  padding: 5px;
+  margin: 5px;
+  width: 95%;
+  height: 110px;
+  text-align:center;
+  border-radius: 5px; 
+}
+
+.precio  {
+  display: flex;
+  height: 42px;
+  font-size: 40px;
+  align-items: center;
+  gap: 3%;
+}
+
+
+.compra input {
+  width: 47px;
+}
+.productos img {
+  width: 5.6rem;
+  height: 5.6rem;
 }
 
 .contact {
@@ -933,6 +1081,74 @@ body {
 .local .map {
   width: 298px;
   height: 265px;
+}
+
+ .frutoseco {
+  width: 170px;
+  height: 270px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.descripcion {
+  background-color: rgba(227, 213, 195, 0.5);
+  font-size: 8px;
+  padding: 5px;
+  margin: 5px;
+  width: 95%;
+  height: 80px;
+  text-align:center;
+  border-radius: 5px; 
+}
+
+.precio  {
+  display: flex;
+  height: 32px;
+  font-size: 30px;
+  align-items: center;
+  gap: 3%;
+}
+
+.libertinus-keyboard-regular {
+  font-family: "Libertinus Keyboard", system-ui;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  margin: 10px;
+}
+
+.productos img {
+  width: 4.48rem;
+  height: 4.48rem;
+}
+
+.compra {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  justify-content: center;
+  
+}
+
+#presentacionNuez {
+  width: 30%;
+}
+#cantidadNuez {
+  width: 30%;
+}
+
+#presentacionAvellana {
+  width: 30%;
+}
+#cantidadAvellana {
+  width: 30%;
+}
+
+#presentacionAlmendra {
+  width: 30%;
+}
+#cantidadAlmendra {
+  width: 30%;
 }
 
 }
@@ -1162,12 +1378,9 @@ main {
   display: none;
 }
 
-/* .redes {
-  margin: 8px;
-  display: flex;
-  justify-content: none;
-  margin-left: 7.5em;
-} */
+ .frutoseco {
+  width: 200px;
+}
 
 }
 
@@ -1260,6 +1473,10 @@ h1 span {
 }
 audio {width: 190px;}
 
+ .frutoseco {
+  width: 210px;
+}
+
 }
 
 @media (max-width: 379px) {
@@ -1267,602 +1484,3 @@ html {
   display: none;
 }
 }
-
-
-
- /* .usuarios h3 {
-  margin-bottom: 25px;
- } */
-
-
-
-/* 
-.libertinus-keyboard-regular {
-  font-family: "Libertinus Keyboard", system-ui;
-  font-size: 25px;
-  font-weight: 400;
-  font-style: normal;
-  margin: 10px;
-}
-
-
-.productos {
-  display: flex;
-  justify-content: center;
-}
-
-
-.frutoseco {
-  border: inset 2px brown ;
-  border-radius: 10px;
-  background-color: rgb(127, 255, 212);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: 15px;
-  width: 350px;
-  height: 430px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, cursor 0.3s ease;
-}
-
-.frutoseco img {
-  width: 150px;
-  height: 150px;
-  border-radius: 5px;
-}
-
-.frutoseco:hover {
-  transform: scale(1.02);
-  cursor: grab;
-}
-
-.frutoseco:nth-child(2) {
-  background-color: aqua;
-}
-
-.frutoseco:last-child {
-  background-color:antiquewhite;
-}
-
-.precio  {
-  display: flex;
-  height: 62px;
-  font-size: 50px;
-  align-items: center;
-  gap: 3%;
-}
-
-.condicionesPrecio {
-  font-size: 20%;
-  width: 15px;
-  color: brown;
-  width: fit-content;
-  text-align: left;
-}
-
-.descripcion {
-  background-color: rgba(227, 213, 195, 0.5);
-  font-size: smaller;
-  padding: 5px;
-  margin: 10px;
-  width: 95%;
-  height: fit-content;
-  text-align:center;
-  border-radius: 5px; 
-}
-
-.compra {
-  display: flex;
-  width: fit-content;
-  justify-content: center;
-  margin-top: 10px;
-  align-items: start;  
-}
-
-.compra button {
-  padding: 0px 8px;
-  color: red;
-  
-}
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 992px) {
- .frutoseco {
-  border: inset 2px brown ;
-  border-radius: 10px;
-  background-color: rgb(127, 255, 212);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-  width: 275px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.productos img {
-  width: 7.84rem;
-  height: 7.84rem;
-}
-
-
-.precio  {
-  display: flex;
-  height: 62px;
-  font-size: 42px;
-  align-items: center;
-  gap: 3%;
-}
-
-.compra input {
-  width: 100px;
-  margin-bottom: 10px;
-}
-
-}
-
-
-
-@media (max-width: 868px) {
-
-header {
-    display: grid;
-    grid-template-columns: 94px minmax(620px, 1fr);
-    grid-template-rows: 60px 30px;
-    gap: 0.3em;
-    margin-top: 0.25rem;
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    background-color:white;
-}
-
-.productos {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
- .frutoseco {
-  border: inset 2px brown ;
-  border-radius: 10px;
-  background-color: rgb(127, 255, 212);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-  width: 220px;
-  height: 340px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.descripcion {
-  background-color: rgba(227, 213, 195, 0.5);
-  font-size: 11px;
-  padding: 5px;
-  margin: 5px;
-  width: 95%;
-  height: 110px;
-  text-align:center;
-  border-radius: 5px; 
-}
-
-.precio  {
-  display: flex;
-  height: 42px;
-  font-size: 40px;
-  align-items: center;
-  gap: 3%;
-}
-
-.libertinus-keyboard-regular {
-  font-family: "Libertinus Keyboard", system-ui;
-  font-size: 20px;
-  font-weight: 400;
-  font-style: normal;
-  margin: 10px;
-}
-
-.compra input {
-  width: 47px;
-  margin-bottom: 10px;
-}
-.productos img {
-  width: 5.6rem;
-  height: 5.6rem;
-}
-}
-
-@media (max-width: 748px) {
-
-header {
-    display: grid;
-    grid-template-columns: 66px minmax(460px, 1fr);
-    grid-template-rows: 40px 20px;
-    gap: 0.3em;
-    margin-top: 0.25rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    background-color:white;
-}
-
-.imagelogo {
-    width: 64px;
-    border-radius: 5px;
-}
-
-.h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.7rem;
-  font-weight: bolder;
-  color: brown;
-  background-color: bisque;
-}
-
-.navlist a {
-  font-size: small;
-  color: aqua;
-  text-decoration: none;
-}
-
-.productos {
-  display: flex;
-  justify-content: center;
-}
-
- .frutoseco {
-  border: inset 2px brown ;
-  border-radius: 10px;
-  background-color: rgb(127, 255, 212);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 170px;
-  height: 270px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.descripcion {
-  background-color: rgba(227, 213, 195, 0.5);
-  font-size: 8px;
-  padding: 5px;
-  margin: 5px;
-  width: 95%;
-  height: 80px;
-  text-align:center;
-  border-radius: 5px; 
-}
-
-.precio  {
-  display: flex;
-  height: 32px;
-  font-size: 30px;
-  align-items: center;
-  gap: 3%;
-}
-
-.libertinus-keyboard-regular {
-  font-family: "Libertinus Keyboard", system-ui;
-  font-size: 15px;
-  font-weight: 500;
-  font-style: normal;
-  margin: 10px;
-}
-
-.productos img {
-  width: 4.48rem;
-  height: 4.48rem;
-}
-
-.compra {
-  display: flex;
-  margin-bottom: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  justify-content: center;
-  
-}
-
-
-#presentacionNuez {
-  width: 30%;
-}
-#cantidadNuez {
-  width: 30%;
-}
-
-#presentacionAvellana {
-  width: 30%;
-}
-#cantidadAvellana {
-  width: 30%;
-}
-
-#presentacionAlmendra {
-  width: 30%;
-}
-#cantidadAlmendra {
-  width: 30%;
-}
-
-
-}
-
-@media (max-width: 548px) {
-  header {
-  display: grid;
-  grid-template-columns: 64px minmax(265px, 1fr);
-  grid-template-rows: 64px;
-  gap: 0.3em;
-  background-color:white;
-}
-
-
-header div {
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid black;
-}
-
-.logo {
-    grid-row: 1 / 2;
-}
-
-.imagelogo {
-  position: fixed;
-    width: 62px;
-    border-radius: 5px;
-}
-
-.h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3em;
-    font-weight: bolder;
-    color: brown;
-    background-color:bisque;
-}
-
-.nav {
-  position: fixed;
-  top: 78px;
-  height: 278px;
-  width: 64px;
-  flex-direction: row;
-}
-
-.navlist {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
-}
-
-.navlist a {
-  font-size: 10px;
-    color: aqua;
-    text-decoration: none;
-}
-
-
-
-.libertinus-keyboard-regular {
-  font-family: "Libertinus Keyboard", system-ui;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-  margin: 10px;
-}
-
-.productos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 70px;
-  gap: 10px;
-}
-
- .frutoseco {
-  border: inset 2px brown ;
-  border-radius: 10px;
-  background-color: rgb(127, 255, 212);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-@media (max-width: 500px) {
-  
-header {
-  display: grid;
-  grid-template-columns: 64px minmax(265px, 1fr);
-  grid-template-rows: 64px;
-  gap: 0.3em;
-  background-color:white;
-}
-
-
-header div {
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid black;
-}
-
-.logo {
-    grid-row: 1 / 2;
-}
-
-.imagelogo {
-  position: fixed;
-    width: 62px;
-    border-radius: 5px;
-}
-
-.h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3em;
-    font-weight: bolder;
-    color: brown;
-    background-color:bisque;
-}
-
-.nav {
-  position: fixed;
-  top: 78px;
-  height: 278px;
-  width: 64px;
-  flex-direction: row;
-}
-
-.navlist {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
-}
-
-.navlist a {
-  font-size: 10px;
-    color: aqua;
-    text-decoration: none;
-}
- 
-
-
-.libertinus-keyboard-regular {
-  font-family: "Libertinus Keyboard", system-ui;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-  margin: 10px;
-}
-
-.productos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 70px;
-  gap: 23px;
-}
-
- .frutoseco {
-  border: inset 2px brown ;
-  border-radius: 10px;
-  background-color: rgb(127, 255, 212);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 210px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-}
-
-@media (max-width: 350px) {
-  
-header {
-  display: grid;
-  grid-template-columns: 64px 1fr;
-  grid-template-rows: 64px;
-  gap: 0.3em;
-  background-color:white;
-}
-
-
-header div {
-    border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    border: 1px solid black;
-}
-
-.logo {
-    grid-row: 1 / 2;
-}
-
-.imagelogo {
-  position: fixed;
-    width: 62px;
-    border-radius: 5px;
-}
-
-.h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1em;
-    font-weight: bolder;
-    color: brown;
-    background-color:bisque;
-}
-
-.nav {
-  position: fixed;
-  top: 78px;
-  height: 278px;
-  width: 64px;
-  flex-direction: row;
-}
-
-.navlist {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
-}
-
-.navlist a {
-  font-size: 10px;
-    color: aqua;
-    text-decoration: none;
-}
-
-
-.libertinus-keyboard-regular {
-  font-family: "Libertinus Keyboard", system-ui;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-  margin: 10px;
-}
-
-.productos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 70px;
-  gap: 23px;
-}
-
- .frutoseco {
-  border: inset 2px brown ;
-  border-radius: 10px;
-  background-color: rgb(127, 255, 212);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 210px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
- */
-

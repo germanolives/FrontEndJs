@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>index</title>
+    <title>offers</title>
 </head>
 <body>
     <header>
@@ -73,7 +73,7 @@
                 </li>
                 <li><a href="./contact.html">Contacto</a></li>
                 <li><a href="./aboutUs.html">Nosotros</a></li>
-                <li><a href="./offers.html">Ofertas</a></li>
+                <li><a href="#">Ofertas</a></li>
                 <li><a href="./login.html">Mi Cuenta</a>
                     <ul class="dropdown-content">
                         <li><a href="./login.html">Iniciar Sesión</a></li>
@@ -85,68 +85,77 @@
         </nav>
     </header>
     <main>
-        <section class="categorias">
-            <h2 id="categorias"><a href="">PRODUCTOS</a></h2>
-            <div>
-                <a class="cardCategoria" href="#aceites""><div>ACEITES</div></a>
-                <a class="cardCategoria" href="#frutosSecos"><div>FRUTOS SECOS</div></a>
-                <a class="cardCategoria" href="#semillas"><div>SEMILLAS</div></a>
-            </div>
-            
-        </section>
         <section class="productos">
-            <article class="aceites">
-                <h2 id="aceites"><a href="">ACEITES</a></h2>
-                <div>
-                    <a class="cardOil" href="#"><div>AGUACATE</div></a>
-                    <a class="cardOil" href="#"><div>ALGODÓN</div></a>
-                    <a class="cardOil" href="#"><div>ALMENDRA</div></a>
-                    <a class="cardOil" href="#"><div>ARROZ</div></a>
-                    <a class="cardOil" href="#"><div>CALABAZA</div></a>
-                    <a class="cardOil" href="#"><div>CÁRTAMO</div></a>
-                    <a class="cardOil" href="#"><div>CHÍA</div></a>
-                    <a class="cardOil" href="#"><div>COCO</div></a>
-                    <a class="cardOil" href="#"><div>LINO</div></a>
-                    <a class="cardOil" href="#"><div>OLIVA</div></a>
-                    <a class="cardOil" href="#"><div>SÉSAMO</div></a>
-                    <a class="cardOil" href="#"><div>UVA</div></a>
+            <article class="frutoseco">
+                <h2 class=>NUECES</h2>
+                <img src="./img/frutosSecos/nueces.jpg" width="250" height="140" alt="nueces">
+                <p class="descripcion">Del árbol nogal, ricos en grasas saludables, proteínas, antioxidantes y minerales,
+                    que ofrecen beneficios como la salud cardiovascular y cerebral. Se pueden consumir solas,
+                    en ensaladas, postre o como parte de platos salados.</p>
+                <div class="precio">
+                    <p>$19.990</p>
+                   <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
+                <form action="#" class="compra">
+                    <label for="presentacionNuez"></label>
+                    <select name="presentacionNuez" id="presentacionNuez">
+                        <option value="" disabled selected>Pack por peso</option>
+                        <option value="1">1 Kilo</option>
+                        <option value="2">2 Kilos</option>
+                        <option value="5">5 Kilos</option>
+                        <option value="15">15 Kilos</option>
+                    </select>
+                    <label for="cantidad"></label>
+                    <input type="number" min="0" id="cantidad" name="cantidad" placeholder="Cantidad">
+                    <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
+                </form>
             </article>
-            <article class="frutosSecos">
-                <h2 id="frutosSecos"><a href="">FRUTOS SECOS</a></h2>
-                <div>
-                    <a class="cardFrutosSecos" href="#"><div>ALMENDRA</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>ANACARDO</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>AVELLANA</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>BELLOTA</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>CACAHUETE</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>CASTAÑA</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>MACADAMIA</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>NUEZ</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>NUEZ BRASIL</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>NUEZ PECAN</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>PISTACHO</div></a>
-                    <a class="cardFrutosSecos" href="#"><div>PIÑÓN</div></a>
+            <article class="frutoseco">
+                <h2>AVELLANAS</h2>
+                <img src="./img/frutosSecos/avellanas.jpg" width="250" height="140" alt="nueces">
+                <p class="descripcion">Del árbol avellano, del Mediterráneo, con una cáscara leñosa y una semilla
+                    comestible rica en grasas saludables, proteínas, vitaminas y minerales. Se consumen de diversas formas para obtener energía, fibra y
+                    antioxidantes.</p>
+                <div class="precio">
+                    <p>$28.700</p>
+                   <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
+                <form action="#" class="compra">
+                    <label for="presentacionAvellana"></label>
+                    <select name="presentacionAvellana" id="presentacionAvellana">
+                        <option value="" disabled selected>Pack por peso</option>
+                        <option value="1">1 Kilo</option>
+                        <option value="3">3 Kilos</option>
+                        <option value="5">5 Kilos</option>
+                    </select>
+                    <label for="cantidad"></label>
+                    <input type="number" min="0" id="cantidad" name="cantidad" placeholder="Cantidad">
+                    <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
+                </form>
             </article>
-            <article class="semillas">
-                <h2 id="semillas"><a href="">SEMILLAS</a></h2>
-                <div>
-                    <a class="cardSemillas" href="#"><div>AMAPOLA</div></a>
-                    <a class="cardSemillas" href="#"><div>AMARANTO</div></a>
-                    <a class="cardSemillas" href="#"><div>CALABAZA</div></a>
-                    <a class="cardSemillas" href="#"><div>CÁÑAMO</div></a>
-                    <a class="cardSemillas" href="#"><div>CHÍA</div></a>
-                    <a class="cardSemillas" href="#"><div>FENOGRECO</div></a>
-                    <a class="cardSemillas" href="#"><div>GIRASOL</div></a>
-                    <a class="cardSemillas" href="#"><div>HINOJO</div></a>
-                    <a class="cardSemillas" href="#"><div>LINO</div></a>
-                    <a class="cardSemillas" href="#"><div>QUINOA</div></a>
-                    <a class="cardSemillas" href="#"><div>SÉSAMO</div></a>
-                    <a class="cardSemillas" href="#"><div>TRIGO SARRACENO</div></a>
+            <article class="frutoseco">
+                <h2>ALMENDRAS</h2>
+                <img src="./img/frutosSecos/almendras.jpg" width="250" height="140" alt="nueces">
+                <p class="descripcion">Del almendro, y tal como otros frutos secos, la semilla es la parte que se consume, la cual
+                    está envuelta por una película de color canela, además de una cáscara exterior que no es comestible, que
+                    representa un peso importante.</p>
+                <div class="precio">
+                    <p>$39.500</p>
+                   <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
+                <form action="#" class="compra">
+                    <label for="presentacionAlmendra"></label>
+                    <select name="presentacionAlmendra" id="presentacionAlmendra">
+                        <option value="" disabled selected>Pack por peso</option>
+                        <option value="1">1 Kilo</option>
+                        <option value="4">4 Kilos</option>
+                        <option value="8">8 Kilos</option>
+                    </select>
+                    <label for="cantidad"></label>
+                    <input type="number" min="0" id="cantidad" name="cantidad" placeholder="Cantidad">
+                    <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
+                </form>
             </article>
-        </article>            
         </section>
     </main>
     <footer id="footer">
@@ -175,5 +184,6 @@
             </div>
         </div>       
     </footer>
+    
 </body>
 </html>
