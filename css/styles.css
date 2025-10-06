@@ -937,7 +937,7 @@ body {
 }
 
 @media (max-width: 992px) {
-body {
+.navlist {
   font-size: 0.9rem;
 }
 
@@ -1046,7 +1046,7 @@ header {
 }
 
 @media (max-width: 800px) {
-body {
+.navlist {
   font-size: 0.75rem;
 }
 
@@ -1154,7 +1154,7 @@ body {
 }
 
 @media (max-width: 700px) {
-body {
+.navlist {
   font-size: 0.7rem;
 }
 
@@ -1318,6 +1318,10 @@ main {
   left: auto;
 }
 
+.descripcion {
+  font-size: 0.rem;
+}
+
 .cardFrutosSecos {
   width: 200px;
   height: 200px;
@@ -1379,14 +1383,22 @@ main {
 }
 
  .frutoseco {
-  width: 200px;
+  width: 220px;
+}
+
+.descripcion {
+  font-size: 0.6rem;
+}
+
+.compra {
+  width: 25em;
 }
 
 }
 
 @media (max-width: 500px) {
 h1 span {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
 }
 
 .contact {
@@ -1473,8 +1485,20 @@ h1 span {
 }
 audio {width: 190px;}
 
+
+}
+
+@media (max-width: 430px) {
  .frutoseco {
-  width: 210px;
+  width: 170px;
+}
+
+.descripcion {
+  font-size: 0.55rem;
+}
+
+.compra {
+  width: 15em;
 }
 
 }
