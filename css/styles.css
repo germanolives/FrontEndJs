@@ -93,6 +93,15 @@ nav {
   font-size: small;
 }
 
+.logoCarrito sub {
+  font-size: xx-small;
+  color: brown;
+  border-radius: 5px;
+  padding: 0em 0.25em 0.1em 0.25em;
+  background-color: aqua;
+ 
+}
+
 .categorias {
   display: flex;
   flex-direction: column;
