@@ -68,6 +68,10 @@ nav {
   text-decoration: none;
 }
 
+li .acaEstoy {
+  color: yellow;
+}
+
 .navlist a:hover {
   color: rgb(255, 255, 255);
 }
