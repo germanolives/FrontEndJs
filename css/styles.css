@@ -99,7 +99,6 @@ nav {
   border-radius: 5px;
   padding: 0em 0.25em 0.1em 0.25em;
   background-color: aqua;
- 
 }
 
 .categorias {
@@ -1276,6 +1275,11 @@ nav {
   flex-direction: column;
   list-style: none;
 }
+
+.logoCarrito {
+  font-size: x-large;
+}
+
 
 .categorias {
   border-radius: 10px;
