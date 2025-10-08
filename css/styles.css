@@ -146,7 +146,7 @@ li .acaEstoy {
   font-weight: 900;
   color: white;
   text-align: center;
-  margin: 1.5em;
+  margin: 1em;
   height: 250px;
   width: 250px;
   background-color: brown;
@@ -210,7 +210,7 @@ li .acaEstoy {
   font-weight: 900;
   color: white;
   text-align: center;
-  margin: 2em;
+  margin: 1em;
   height: 200px;
   width: 200px;
   background-color: brown;
@@ -302,7 +302,7 @@ li .acaEstoy {
   font-kerning: normal;
   color: white;
   text-align: center;
-  margin: 2em;
+  margin: 1em;
   height: 200px;
   width: 200px;
   background-color: brown;
@@ -399,7 +399,7 @@ h2 a {
   font-weight: 900;
   color: white;
   text-align: center;
-  margin: 2em;
+  margin: 1em;
   height: 200px;
   width: 200px;
   background-color: brown;
@@ -1299,6 +1299,7 @@ nav {
 .cardCategoria {
   width: 250px;
   height: 250px;
+  margin: 0.5em;
 }
 
 .aceites {
@@ -1309,6 +1310,7 @@ nav {
 .cardOil {
   width: 200px;
   height: 200px;
+  margin: 0.5em;
 }
 
 .aceites h2 {
@@ -1335,6 +1337,7 @@ nav {
 .cardFrutosSecos {
   width: 200px;
   height: 200px;
+  margin: 0.5em;
 }
 
 .semillas {
@@ -1351,6 +1354,7 @@ nav {
 .cardSemillas {
   width: 200px;
   height: 200px;
+  margin: 0.5em;
 }
 
 .chat {
