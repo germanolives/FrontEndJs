@@ -98,12 +98,11 @@ li .acaEstoy {
 }
 
 .logoCarrito sub {
-  font-size: xx-small;
-  color: brown;
-  border-radius: 5px;
-  padding: 0em 0.25em 0em 0.25em;
-  background-color: aqua;
+  font-size: small;
+  font-weight: bolder;
+  color: yellow;
 }
+
 
 .categorias {
   display: flex;
