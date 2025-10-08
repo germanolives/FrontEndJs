@@ -950,7 +950,7 @@ body {
 }
 
 @media (max-width: 992px) {
-.navlist {
+.navlist, .dropdown-content li a {
   font-size: 0.9rem;
 }
 
@@ -1059,7 +1059,7 @@ header {
 }
 
 @media (max-width: 800px) {
-.navlist {
+.navlist, .dropdown-content li a{
   font-size: 0.75rem;
 }
 
@@ -1159,7 +1159,7 @@ header {
 }
 
 @media (max-width: 700px) {
-.navlist {
+.navlist, .dropdown-content li a {
   font-size: 0.7rem;
 }
 
