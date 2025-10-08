@@ -1498,23 +1498,6 @@ audio {width: 190px;}
 
 }
 
-@media (max-width: 430px) {
-.cardOferta {
-  width: 170px;
-}
-
-.descripcion {
-  font-size: 0.55rem;
-}
-
-.compra {
-  width: 15em;
-}
-
-
-
-}
-
 @media (max-width: 379px) {
 html {
   display: none;
