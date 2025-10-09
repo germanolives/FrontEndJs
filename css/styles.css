@@ -613,11 +613,6 @@ h2 a {
   resize: none;
 }
 
-button {
-  padding: 0.5em 1.5em;
-  font-size: large;
-}
-
 .ubic {
   display: flex;
   flex-direction: column;
@@ -705,7 +700,7 @@ button {
   font-size: large;
 }
 
-button {
+.login button, .contact button {
   padding: 0.5em 1.5em;
   font-size: large;
   background-color: hsl(0, 0%, 90%);
@@ -905,15 +900,16 @@ body {
 
 .compra {
   display: flex;
-  width: fit-content;
-  height: fit-content;
+  width: 95%;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 0.5rem;
+
+
 }
 
 .compra button {
-  padding: 0cqmin 8px;
   color: red;
+  padding: 0rem 0.75rem;
 }
 
 
@@ -922,7 +918,7 @@ body {
 
 
 
-@media (max-width: 1135px) {
+@media (max-width:1135px) {
 
 .cardCategoria {
   height: 200px;
@@ -1045,7 +1041,7 @@ header {
 
 
 .compra input {
-  width: 47px;
+  width: 100%;
 }
 .ofertas img {
   width: 5.6rem;
@@ -1132,10 +1128,11 @@ header {
   margin-top: 5px;
   border-radius: 5px;
   justify-content: center;
+  width: 95%;
   
 }
 
-#presentacionNuez {
+/* #presentacionNuez {
   width: 30%;
 }
 #cantidadNuez {
@@ -1154,7 +1151,7 @@ header {
 }
 #cantidadAlmendra {
   width: 30%;
-}
+} */
 
 }
 
@@ -1399,9 +1396,6 @@ nav {
   font-size: 0.6rem;
 }
 
-.compra {
-  width: 25em;
-}
 
 }
 
