@@ -1233,10 +1233,8 @@ main {
 
 
 header {
-    z-index: 1;
     grid-template-columns: 70px 1fr;
     grid-template-rows: 70px;
-    position: relative;
 }
 
 .logo {
@@ -1262,7 +1260,6 @@ nav {
   justify-content: center;
   align-items: start;
   position: fixed;
-  z-index: 1;
   height: 350px;
   top: 80px;
   left: 25px;
