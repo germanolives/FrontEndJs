@@ -9,8 +9,8 @@
 
 header {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: 70px 30px;
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 60px 30px;
     gap: 0.3rem;
     margin-top: 0.25rem;
     margin-right: 1.5rem;
@@ -36,11 +36,8 @@ header {
 
 h1 {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  font-weight: bolder;
   color: brown;
   background-color: bisque;
   border-radius: 5px;
@@ -48,39 +45,39 @@ h1 {
   border: 1px solid grey;
 }
 
-h1 span {
-  font-size: 1.5rem;
-
-}
-
 .search {
   display: flex;
+  height: 55%;
   position: relative;
-  
-  
 }
 
-/* .search input {
-  position: relative;
-} */
-
-.search button {
-  position: absolute;
-  right: 0;
-  
-  
-}
-
-.search input, .search button {
-  border-radius: 5px;
+.search input {
   outline: none;
   border: 1px solid grey;
-  background-color: hsl(33, 100%, 95%);
+  border-radius: 5px;
+  padding-left: 0.2rem;
+  padding-bottom: 0.15rem;
+  background-color: bisque;
+  width: 398px;
+}
+
+.search input::placeholder {
+  font-size: 1.8rem;
+  color: brown;
+  font-weight: bold;
+  background-color: bisque;  
 }
 
 .search button {
+  padding: 0 0.25rem;
+  background-color: bisque;
+  border: 1px solid grey;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 1rem;
   border-radius: 0px 5px 5px 0px;
-  border-left: none;
 }
 
 nav {
@@ -1287,8 +1284,16 @@ h1 {
   grid-column: 2 / 3;
 }
 
-h1 span {
-  font-size: 1.25rem;
+.search {
+  height: 50%;
+}
+
+.search input {
+  width: 245px;
+}
+
+.search input::placeholder {
+  font-size: 1.04rem;
 }
 
 nav {
