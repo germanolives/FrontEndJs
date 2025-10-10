@@ -47,7 +47,7 @@ h1 {
 
 .search {
   display: flex;
-  height: 55%;
+  height: 75%;
   position: relative;
 }
 
@@ -64,7 +64,7 @@ h1 {
   font-size: 1.8rem;
   color: brown;
   font-weight: bold;
-  background-color: bisque;  
+  background-color: bisque;
 }
 
 .search button {
@@ -1284,7 +1284,7 @@ h1 {
 }
 
 .search {
-  height: 50%;
+  height: 55%;
 }
 
 .search input {
