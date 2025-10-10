@@ -47,7 +47,7 @@ h1 {
 
 .search {
   display: flex;
-  height: 65%;
+  height: 75%;
   position: relative;
 }
 
@@ -59,28 +59,30 @@ h1 {
   border: 1px solid grey;
   border-radius: 5px;
   padding-left: 0.25rem;
-  /* padding-top: 0.65rem; */
-  background-color: hsl(33, 100%, 95%);
+  padding-top: 0.87rem;
+  background-color: rgb(255, 244, 229);
   width: 398px;
 }
 
 .search input::placeholder {
-  
   font-size: 1.8rem;
-  color: brown;
+  color: rgba(165, 42, 42, 0);
   font-weight: bold;
   background-color: hsl(33, 100%, 95%);
+  background-image: url(../img/TTP.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .search button {
-  padding: 0 0.25rem;
+  padding: 0 0.3rem;
   background-color: hsl(33, 100%, 88%);
   border: 1px solid grey;
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
-  font-size: ;
+  font-size: 1.25rem;
   border-radius: 0px 5px 5px 0px;
 }
 
@@ -1293,11 +1295,16 @@ h1 {
 }
 
 .search input {
+  padding-top: 0.1rem;
   width: 245px;
 }
 
 .search input::placeholder {
-  font-size: 1.04rem;
+  font-size: 1rem;
+  color: brown;
+  background-size: contain;
+  background-image: url(../img/TTPNeutro.jpg);
+  background-position: 12px;
 }
 
 nav {
