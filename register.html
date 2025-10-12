@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>register</title>
+</head>
+<body>
+    <header>
+        <a class="logo" href="./index.html"><img src="./img/logo.jpg" width="70" alt="logo"></a>
+        <h1>
+            <form class="search" action="./index.html" method="get">
+                <input class="" type="search" name="search" value="" placeholder="TIENDA TRES PRODUCTOS" size="54">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </h1>
+        <nav>
+            <ul class="navlist">
+                <li><a href="./index.html#categorias">Productos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#aceites">Aceites</a></li>
+                        <li><a href="#frutosSecos">Frutos Secos</a></li>
+                        <li><a href="#semillas">Semillas</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index.html#aceites"">Aceites</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#"">Aguacate</a></li>
+                        <li><a href="#">Algodón</a></li>
+                        <li><a href="#">Almendra</a></li>
+                        <li><a href="#">Arroz</a></li>
+                        <li><a href="#">Calabaza</a></li>
+                        <li><a href="#">Cártamo</a></li>
+                        <li><a href="#">Chía</a></li>
+                        <li><a href="#">Coco</a></li>
+                        <li><a href="#">Lino</a></li>
+                        <li><a href="#">Oliva</a></li>
+                        <li><a href="#">Sésamo</a></li>
+                        <li><a href="#">Uva</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index.html#frutosSecos">FrutosSecos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Almendra</a></li>
+                        <li><a href="#">Anacardo</a></li>
+                        <li><a href="#">Avellana</a></li>
+                        <li><a href="#">Bellota</a></li>
+                        <li><a href="#">Cacahuete</a></li>
+                        <li><a href="#">Castaña</a></li>
+                        <li><a href="#">Macadamia</a></li>
+                        <li><a href="#">Nuez</a></li>
+                        <li><a href="#">Nuez Brasil</a></li>
+                        <li><a href="#">Nuez Pecan</a></li>
+                        <li><a href="#">Pistacho</a></li>
+                        <li><a href="#">Piñón</a></li>
+                    </ul>
+                </li>
+                <li><a href="./index.html#semillas">Semillas</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Amapola</a></li>
+                        <li><a href="#">Amaranto</a></li>
+                        <li><a href="#">Calabaza</a></li>
+                        <li><a href="#">Cáñamo</a></li>
+                        <li><a href="#">Chía</a></li>
+                        <li><a href="#">Fenogreco</a></li>
+                        <li><a href="#">Girasol</a></li>
+                        <li><a href="#">Hinojo</a></li>
+                        <li><a href="#">Lino</a></li>
+                        <li><a href="#">Quinoa</a></li>
+                        <li><a href="#">Sésamo</a></li>
+                        <li><a href="#">Trigo Sarraceno</a></li>
+                    </ul>
+                </li>
+                <li><a href="./contact.html">Contacto</a></li>
+                <li><a href="./aboutUs.html">Nosotros</a></li>
+                <li><a href="./offers.html">Ofertas</a></li>
+                <li><a class="acaEstoy" href="./login.html">Mi Cuenta</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./login.html">Iniciar Sesión</a></li>
+                        <li><a class="acaEstoy" href="#name">Crear Cuenta</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="carrito">
+                        <li class="logoCarrito"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li class="counterCarrito"><sub>4</sub>
+                            <ul class="detalleCounterCarrito">
+                                <li><a class="detalleProd" href="#"><span>Aceite de Coco</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
+                                <li><a class="detalleProd" href="#"><span>Anacardos</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
+                                <li><a class="detalleProd" href="#"><span>Aceite de Oliva</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
+                                <li><a class="detalleProd" href="#"><span>Macadamias</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li class="logoCarrito"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a><sub>0</sub></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="usuarios">
+        <form action="#" method="post" class="register">
+                <strong>REGISTRE SU CUENTA</strong>
+                <div class="datosUsuario">
+                    <div class="input">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" required value="" size="35">
+                    </div>
+                    <div class="input">
+                        <label for="lastname">Apellido</label>
+                        <input type="text" name="lastname" id="lastname" required value="" size="35">
+                    </div>
+                    <div class="inputDos">
+                        <div class="input">  
+                            <label for="date">Nacimiento</label>
+                            <input type="date" name="date" id="date" required value>
+                        </div>
+                        <div class="input"> 
+                            <label for="gender">Género</label>
+                            <select class="input" name="gender" id="gender">
+                                <option class="input" value="female">Femenino</option>
+                                <option class="input" value="male">Masculino</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <label for="mail">Correo Electrónico</label>
+                        <input type="mail" name="mail" id="mail" required value="" size="35">
+                    </div>
+                    <div class="input">
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass" required value="" size="35">
+                    </div>
+                    <div class="input">
+                        <label for="pass">Repetir Contraseña</label>
+                        <input type="password" name="pass" id="pass" required value="" size="35">
+                    </div>
+                </div>
+                <div>
+                    <button type="submit">Crear Cuenta</button>
+                </div> 
+            </div>
+             
+        </form>
+        </section>
+    </main>
+    <footer id="footer" class="footerRegister">
+        <div class="redes">
+            <ul>
+                <li><a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="#" class="pinterest"><i class="fa-brands fa-pinterest"></i></a></li>
+                <li><a href="#" class="threads"><i class="fa-brands fa-threads"></i></a></li>
+                <li><a href="#" class="tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#" class="twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" class="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="tyc">
+            <h5>TÉRMINOS Y CONDICIONES</h5>
+            <p>@2025 <strong>Tienda 3prOdUctOs</strong> | Derechos Reservados</p>
+        </div>
+        <div class="chat">
+            <a class="whatsapp" href="https://wa.me/34696035156" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-whatsapp"></i></a>
+            <a class="telegram" href="https://t.me/germanolivesES02" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram"></i></a>
+            <div class="upDown">
+                <a class="home" href="#"><i class="fa-solid fa-caret-up"></i></a>
+                <a class="foot" href="#footer"><i class="fa-solid fa-caret-down"></i></a>
+            </div>
+        </div>       
+    </footer>
+</body>
+</html>

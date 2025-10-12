@@ -1,0 +1,1629 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* border: 1px solid black; */
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 60px 30px;
+    gap: 0.3rem;
+    margin-top: 0.25rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    background-color:white;
+}
+
+.logo {
+    grid-row: 1 / 3;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid grey;
+    background-image: url(../img/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center ;
+    background-position-y: center;
+}
+
+.logo img {
+  display: none;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: brown;
+  background-color: bisque;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid grey;
+}
+
+.search {
+  display: flex;
+  height: 75%;
+  position: relative;
+}
+
+.search input {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  outline: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding-left: 0.25rem;
+  padding-top: 0.87rem;
+  background-color: rgb(255, 244, 229);
+  width: 398px;
+}
+
+.search input::placeholder {
+  font-size: 1.8rem;
+  color: rgba(165, 42, 42, 0);
+  font-weight: bold;
+  background-color: hsl(33, 100%, 95%);
+  background-image: url(../img/TTP.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.search button {
+  padding: 0 0.3rem;
+  background-color: hsl(33, 100%, 88%);
+  border: 1px solid grey;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 1.25rem;
+  border-radius: 0px 5px 5px 0px;
+}
+
+nav {
+  display: flex;
+  background-color: brown;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid grey;
+}
+
+.navlist {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+.navlist a {
+  color: aqua;
+  text-decoration: none;
+}
+
+li .acaEstoy {
+  color: yellow;
+}
+
+.navlist a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.navlist li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(165, 42, 42, 1);
+  min-width: 6.5em;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  border-radius: 0px 0px 5px 5px;
+  z-index: 1;
+  padding: 5px;
+}
+
+.navlist li:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.dropdown-content a{
+  font-size: small;
+}
+
+.logoCarrito sub {
+  font-size: small;
+  font-weight: bolder;
+  color: yellow;
+}
+
+
+.carrito {
+  display: flex;
+  list-style: none;
+}
+
+.counterCarrito {
+  color: yellow;
+  font-size: medium;
+  font-weight: bolder;
+  padding-right: 8px;
+}
+
+.detalleCounterCarrito {
+  font-size: small;
+  font-weight: normal;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: brown;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  border-radius: 0px 0px 5px 5px;
+  z-index: 1;
+  right: 0;
+  width: 20%;
+  margin-right: 1.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+}
+
+.detalleCounterCarrito li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  
+}
+
+.detalleProd {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  
+
+}
+
+.detalleCounterCarrito li span {
+  display: flex;
+  justify-content: end;
+  height:1.2rem;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-radius: 5px;
+  border: 1px solid grey;
+  margin: 1px;
+  padding: 0 5px;
+} 
+
+
+
+.removeCart span {
+  color: yellow;
+}
+
+.detalleProd span:first-child {
+  justify-content: start;
+}
+
+.removeCart {
+  padding-left: 2px;
+}
+
+.counterCarrito:hover .detalleCounterCarrito {
+  display: block;
+}
+
+.detalleProd span::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.categorias {
+  display: flex;
+  flex-direction: column;
+  background-color:aquamarine;
+  margin: 6em 3em 6em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 10px 10px;
+  border: 1px solid hsl(0, 0%, 50%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.categorias div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.categorias h2 {
+  width: 210px;
+  text-align: center;
+  position: absolute;
+  top: -33.5px;
+  left: -1px;
+  background-color:aquamarine;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid hsl(0, 0%, 50%);
+}
+
+.cardCategoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  margin: 1em;
+  height: 250px;
+  width: 250px;
+  background-color: brown;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+  background-size: contain;
+}
+
+.cardCategoria:nth-child(1) {
+  background-image: url(../img/categorias/aceites.jpg);
+}
+.cardCategoria:nth-child(2) {
+  background-image: url(../img/categorias/frutosSecos.jpg);
+}
+.cardCategoria:nth-child(3) {
+  background-image: url(../img/categorias/semillas.jpg);
+}
+.cardCategoria:hover {
+  transform: scale(1.04);
+}
+
+.aceites {
+  display: flex;
+  flex-direction: column;
+  background-color:aqua;
+  margin: 6em 5em 6em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 10px 10px;
+  border: 1px solid hsl(0, 0%, 50%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.aceites div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.aceites h2 {
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  top: -33.5px;
+  left: -1px;
+  background-color: aqua;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid hsl(0, 0%, 50%);
+}
+
+.cardOil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  margin: 1em;
+  height: 200px;
+  width: 200px;
+  background-color: brown;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+  background-size: contain;
+}
+
+.cardOil:nth-child(1) {
+  background-image: url(../img/aceites/oilAguacate.jpg);
+}
+.cardOil:nth-child(2) {
+  background-image: url(../img/aceites/oilAlgodon.jpg);
+}
+.cardOil:nth-child(3) {
+  background-image: url(../img/aceites/oilAlmendras.jpg);
+}
+.cardOil:nth-child(4) {
+  background-image: url(../img/aceites/oilArroz.jpg);
+}
+.cardOil:nth-child(5) {
+  background-image: url(../img/aceites/oilCalabaza.jpg);
+}
+.cardOil:nth-child(6) {
+  background-image: url(../img/aceites/oilCartamo.jpg);
+}
+.cardOil:nth-child(7) {
+  background-image: url(../img/aceites/oilChia.jpg);
+}
+.cardOil:nth-child(8) {
+  background-image: url(../img/aceites/oilCoco.jpg);
+}
+.cardOil:nth-child(9) {
+  background-image: url(../img/aceites/oilLino.jpg);
+}
+.cardOil:nth-child(10) {
+  background-image: url(../img/aceites/oilOliva.jpg);
+}
+.cardOil:nth-child(11) {
+  background-image: url(../img/aceites/oilSesamo.jpg);
+}
+.cardOil:nth-child(12) {
+  background-image: url(../img/aceites/oilUva.jpg);
+}
+.cardOil:hover {
+  transform: scale(1.04);
+}
+
+.frutosSecos {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  margin: 6em 5em 6em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 10px 10px;
+  border: 1px solid hsl(0, 0%, 50%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.frutosSecos div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.frutosSecos h2 {
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  top: -33.5px;
+  left: -1px;
+  background-color: bisque;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid hsl(0, 0%, 50%);
+}
+
+.cardFrutosSecos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  font-kerning: normal;
+  color: white;
+  text-align: center;
+  margin: 1em;
+  height: 200px;
+  width: 200px;
+  background-color: brown;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+  background-size: contain;
+}
+
+.cardFrutosSecos:nth-child(1) {
+  background-image: url(../img/frutosSecos/almendras.jpg);
+}
+.cardFrutosSecos:nth-child(2) {
+  background-image: url(../img/frutosSecos/anacardos.jpg);
+}
+.cardFrutosSecos:nth-child(3) {
+  background-image: url(../img/frutosSecos/avellanas.jpg);
+}
+.cardFrutosSecos:nth-child(4) {
+  background-image: url(../img/frutosSecos/bellotas.jpg);
+}
+.cardFrutosSecos:nth-child(5) {
+  background-image: url(../img/frutosSecos/cacahuetes.jpg);
+}
+.cardFrutosSecos:nth-child(6) {
+  background-image: url(../img/frutosSecos/castanas.jpg);
+}
+.cardFrutosSecos:nth-child(7) {
+  background-image: url(../img/frutosSecos/macadamias.jpg);
+}
+.cardFrutosSecos:nth-child(8) {
+  background-image: url(../img/frutosSecos/nueces.jpg);
+}
+.cardFrutosSecos:nth-child(9) {
+  background-image: url(../img/frutosSecos/nuecesBrasil.jpg);
+}
+.cardFrutosSecos:nth-child(10) {
+  background-image: url(../img/frutosSecos/pecan.jpg);
+}
+.cardFrutosSecos:nth-child(11) {
+  background-image: url(../img/frutosSecos/pinones.jpg);
+}
+.cardFrutosSecos:nth-child(12) {
+  background-image: url(../img/frutosSecos/pistachos.jpg);
+}
+
+.cardFrutosSecos:hover {
+  transform: scale(1.04);
+}
+
+.semillas {
+  display: flex;
+  flex-direction: column;
+  background-color: burlywood;
+  margin: 6em 5em 6em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 10px 10px;
+  border: 1px solid hsl(0, 0%, 50%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.semillas div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.semillas h2 {
+  width: 200px;
+  text-align: center;
+  position: absolute;
+  top: -33.5px;
+  left: -1px;
+  background-color: burlywood;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid hsl(0, 0%, 50%);
+}
+
+h2 a {
+  text-decoration: none;
+  color: brown;
+}
+
+.cardSemillas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  margin: 1em;
+  height: 200px;
+  width: 200px;
+  background-color: brown;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+  background-size: contain;
+}
+
+.cardSemillas:nth-child(1) {
+  background-image: url(../img/semillas/semillasAmapola.jpg);
+}
+.cardSemillas:nth-child(2) {
+  background-image: url(../img/semillas/semillasAmaranto.jpg);
+}
+.cardSemillas:nth-child(3) {
+  background-image: url(../img/semillas/semillasCalabaza.jpg);
+}
+.cardSemillas:nth-child(4) {
+  background-image: url(../img/semillas/semillasCanamo.jpg);
+}
+.cardSemillas:nth-child(5) {
+  background-image: url(../img/semillas/semillasChia.jpg);
+}
+.cardSemillas:nth-child(6) {
+  background-image: url(../img/semillas/semillasFenogrecol.jpg);
+}
+.cardSemillas:nth-child(7) {
+  background-image: url(../img/semillas/semillasGirasol.jpg);
+}
+.cardSemillas:nth-child(8) {
+  background-image: url(../img/semillas/semillasHinojo.jpg);
+}
+.cardSemillas:nth-child(9) {
+  background-image: url(../img/semillas/semillasLino.jpg);
+}
+.cardSemillas:nth-child(10) {
+  background-image: url(../img/semillas/semillasQuinoa.jpg);
+}
+.cardSemillas:nth-child(11) {
+  background-image: url(../img/semillas/semillasSesamo.jpg);
+}
+.cardSemillas:nth-child(12) {
+  background-image: url(../img/semillas/semillasTrigoSarraceno.jpg);
+}
+
+.cardSemillas:hover {
+  transform: scale(1.04);
+}
+
+/*FOOTER --------------------------------------------------------------------------------------------------------------*/
+
+/* .footer {
+  position: relative;
+} */
+
+.redes {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.redes ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 450px;
+  border-radius: 5px;
+}
+
+.redes li {
+  list-style: none;
+  font-size: 30px;
+}
+
+.facebook {
+  color: rgb(24, 119, 242);
+}
+.instagram {
+  background: linear-gradient(to bottom, #405DE6, #833AB4, #C13584, #F56040, #FFDC80);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.linkedin {
+  color: #0072b1;
+}
+.pinterest {
+  color: #E60023;
+}
+.threads {
+  color: black;
+}
+.twitter {
+  color: black;
+}
+.youtube {
+  color: #c4302b;
+}
+.tiktok {
+  color: black;
+}
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: fit-content;
+  bottom: 35px;
+  right: 10px;  
+}
+
+.whatsapp {
+  color: #25D366;
+  font-size: 50px;
+}
+
+.telegram {
+  color: #0088CC;
+  font-size: 45px;
+}
+
+.chat div {
+  margin-top: 10px;
+  border: 4px solid rgb(0, 230, 153);
+  border-radius: 10px;
+  display: flex;
+  flex-direction:column;
+
+  align-items: center;
+}
+.home {
+  font-size: 28px;
+  color: #00e699;
+  border-bottom: 2px solid rgb(0, 230, 153);
+}
+
+.foot {
+  font-size: 28px;
+  color: #00e699;
+  border-top: 2px solid rgb(0, 230, 153);
+}
+
+.tyc {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 228, 196, 0.6);
+  color: brown;
+ }
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*CONTACT.HTML*/
+
+.mainContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  
+}
+
+
+.usuarios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact {
+  border: 1px solid hsl(0, 0%, 50%);
+  border-radius: 10px;
+  background-color:antiquewhite;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  width: 350px;
+  height: 430px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+}
+
+.contact strong {
+  font-size: large;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.usuarios input {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid grey;
+  outline: none;
+}
+
+.contact textarea {
+  border-radius: 5px;
+  border: 1px solid grey;
+  outline: none;
+  resize: none;
+}
+
+.ubic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height:430px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color:antiquewhite;
+}
+
+
+.llegar p {
+  font-size: larger;
+  text-align: center;
+}
+
+.llegar h5 {
+  text-align: center;
+  font-size: large;
+}
+
+.local .map {
+  width: 462.5px;
+  height: 250px;
+  border: 1px solid grey;
+}
+
+.local h5 {
+  text-align: center;
+  font-size: large;
+}
+
+
+/*LOGIN.HTML*/
+
+.login {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: rgb(127, 255, 212);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  width: 350px;
+  height: 355px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+}
+
+.nuevaCuenta {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 350px;
+  height: 60px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+}
+
+.nuevaCuenta a {
+  text-decoration: none;
+  cursor:default;
+  background-color: hsl(0, 0%, 90%);
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 0.55em 1em;
+
+  color: black;
+
+}
+
+.nuevaCuenta a:hover {
+ background-color: hsl(0, 0%, 80%);
+}
+
+.login strong {
+  font-size: large;
+}
+
+.login button, .contact button {
+  padding: 0.5em 1.5em;
+  font-size: large;
+  background-color: hsl(0, 0%, 90%);
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.login button:hover {
+ background-color: hsl(0, 0%, 80%);
+}
+
+/*REGISTER.HTML*/
+
+.register {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  width: 350px;
+  height: 430px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+}
+
+.register strong {
+  font-size: large;
+}
+
+.inputDos {
+  display: flex;
+  justify-content: space-between;
+  width: 296px;
+}
+
+.register button {
+  padding: 0.5em 1.5em;
+  font-size: large;
+  background-color: hsl(0, 0%, 90%);
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.register button:hover {
+ background-color: hsl(0, 0%, 80%);
+}
+
+.register select {
+  border-radius: 5px;
+  height: 29px;
+  border: 1px solid grey;
+  background-color: white;
+} 
+
+
+/*NOSOTROS.HTML*/
+
+body {
+  background-image: url(../img/waves.mp4);
+}
+
+.nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 525px;
+  margin: auto;
+  margin-bottom: 2.65em;
+  background-color: #00e699;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  
+}
+
+
+.cardTextNosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  font-size: 0em;
+  color: black;
+  text-align: left;
+  padding: 1em;
+  gap: 0.75em;
+  background-image: url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  width: 525px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: transform 0.3s ease, cursor 0.3s ease;
+}
+
+.cardTextNosotros:hover {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  color: white;
+  text-align: left;
+  padding: 1em;
+  gap: 0.75em;
+  background-image: url(../img/fondoBlur.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 525px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: transform 0.3s ease, cursor 0.3s ease;
+  transform: scale(1.01);
+  overflow: auto; 
+}
+
+
+/*OFFERS HTML ---------------------------------------------------------------------------------------------------------------*/
+
+.ofertas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.cardOferta {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: rgb(127, 255, 212);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  width: 350px;
+  height: 430px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, cursor 0.3s ease;
+}
+
+.cardOferta img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.cardOferta:hover {
+  transform: scale(1.02);
+  cursor: grab;
+}
+
+.cardOferta:nth-child(2) {
+  background-color: aqua;
+}
+
+.cardOferta:last-child {
+  background-color:antiquewhite;
+}
+
+.precio  {
+  display: flex;
+  height: 62px;
+  font-size: 50px;
+  align-items: center;
+  gap: 3%;
+}
+
+.condicionesPrecio {
+  font-size: 20%;
+  width: 15px;
+  color: brown;
+  width: fit-content;
+  text-align: left;
+}
+
+.descripcion {
+  background-color: rgba(227, 213, 195, 0.5);
+  font-size: smaller;
+  padding: 5px;
+  margin: 10px;
+  width: 95%;
+  height: fit-content;
+  text-align:center;
+  border-radius: 5px; 
+}
+
+.compra {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  margin-top: 0.5rem;
+
+
+}
+
+.compra button {
+  color: red;
+  padding: 0rem 0.75rem;
+}
+
+
+
+
+
+
+
+@media (max-width:1135px) {
+
+.cardCategoria {
+  height: 200px;
+  width: 200px;
+}
+
+.cardOil {
+  font-size: 1.5rem;
+  height: 160px;
+  width: 160px;
+}
+
+.cardFrutosSecos {
+  font-size: 1.5rem;
+  font-weight: 900;
+  height: 160px;
+  width: 160px;
+}
+
+.cardSemillas {
+  font-size: 1.5rem;
+  height: 160px;
+  width: 160px;
+}
+}
+
+@media (max-width: 992px) {
+.navlist, .dropdown-content li a {
+  font-size: 0.9rem;
+}
+
+/* header {
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 45px 25px;
+} */
+
+.categorias h2 {
+  top: -33px;
+  left: -0.5px;
+}
+
+.aceites h2 {
+  top: -33px;
+  left: -0.5px;
+}
+
+.frutosSecos h2 {
+  top: -33px;
+  left: -0.5px;
+}
+
+.semillas h2 {
+  top: -33px;
+  left: -0.5px;
+}
+
+.ubic {
+  width: 400px;
+}
+
+.local .map {
+  width: 398px;
+}
+
+ .cardOferta {
+  margin: 15px;
+  width: 275px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ofertas img {
+  width: 7.84rem;
+  height: 7.84rem;
+}
+
+
+.precio  {
+  display: flex;
+  height: 62px;
+  font-size: 42px;
+  align-items: center;
+  gap: 3%;
+}
+
+.compra input {
+  width: 100px;
+}
+
+}
+
+@media (max-width: 915px) {
+.mainContact {
+  gap: 1em;
+}
+
+ .cardOferta {
+  margin: 15px;
+  width: 220px;
+  height: 340px;
+}
+
+.descripcion {
+  background-color: rgba(227, 213, 195, 0.5);
+  font-size: 11px;
+  padding: 5px;
+  margin: 5px;
+  width: 95%;
+  height: 110px;
+  text-align:center;
+  border-radius: 5px; 
+}
+
+.precio  {
+  display: flex;
+  height: 42px;
+  font-size: 40px;
+  align-items: center;
+  gap: 3%;
+}
+
+
+.compra input {
+  width: 100%;
+}
+.ofertas img {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+.contact {
+  width: 300px;
+}
+
+}
+
+@media (max-width: 800px) {
+.navlist, .dropdown-content li a{
+  font-size: 0.75rem;
+}
+
+.counterCarrito:hover .detalleCounterCarrito {
+  display: none;
+}
+
+.categorias h2 {
+  top: -33px;
+  left: -0.5px;
+}
+
+.aceites h2 {
+  top: -33px;
+  left: -0.5px;
+}
+
+.frutosSecos h2 {
+  top: -33px;
+  left: -0.5px;
+}
+
+.semillas h2 {
+  top: -33px;
+  left: -0.5px;
+}
+
+.mainContact {
+  gap: 0;
+}
+
+.ubic {
+  width: 300px;
+}
+
+.local .map {
+  width: 298px;
+  height: 265px;
+}
+
+ .cardOferta {
+  width: 170px;
+  height: 270px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.descripcion {
+  background-color: rgba(227, 213, 195, 0.5);
+  font-size: 8px;
+  padding: 5px;
+  margin: 5px;
+  width: 95%;
+  height: 80px;
+  text-align:center;
+  border-radius: 5px; 
+}
+
+.precio  {
+  display: flex;
+  height: 32px;
+  font-size: 30px;
+  align-items: center;
+  gap: 3%;
+}
+
+.ofertas img {
+  width: 4.48rem;
+  height: 4.48rem;
+}
+
+.compra {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  justify-content: center;
+  width: 95%;
+  
+}
+
+/* #presentacionNuez {
+  width: 30%;
+}
+#cantidadNuez {
+  width: 30%;
+}
+
+#presentacionAvellana {
+  width: 30%;
+}
+#cantidadAvellana {
+  width: 30%;
+}
+
+#presentacionAlmendra {
+  width: 30%;
+}
+#cantidadAlmendra {
+  width: 30%;
+} */
+
+}
+
+@media (max-width: 700px) {
+.navlist, .dropdown-content li a {
+  font-size: 0.7rem;
+}
+
+header {
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 60px 25px;
+}
+
+.logo {
+    grid-row: 1 / 2;
+}
+
+nav {
+  grid-column: 1 / 3;
+}
+
+.categorias h2 {
+  top: -33px;
+  left: -0.9px;
+}
+
+.aceites h2 {
+  top: -23.5px;
+  left: -0.9px;
+}
+
+.frutosSecos h2 {
+  top: -33px;
+  left: -0.9px;
+}
+
+.semillas h2 {
+  top: -33px;
+  left: -0.9px;
+}
+
+.contact {
+  width: 290px;
+}
+
+}
+
+@media (max-width: 670px) {
+.mainContact {
+  flex-direction: column;
+  gap: 4em;
+}
+
+.contact {
+  width: 350px;
+}
+
+.ubic {
+  width: 440px;
+}
+
+.local .map {
+  width: 438px;
+  height: 250px;
+  border: 1px solid grey;
+}
+
+
+}
+
+@media (max-width: 598px) {
+
+main {
+  margin: 0em 1.7em 2em 6.4em;
+}
+
+
+header {
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 70px;
+}
+
+.logo {
+  position: fixed;
+  top: 4.3px;
+  left: 24px;
+  border: none;   
+}
+
+.logo img {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+h1 {
+  grid-column: 2 / 3;
+}
+
+.search {
+  height: 55%;
+}
+
+.search input {
+  padding-top: 0.1rem;
+  width: 245px;
+}
+
+.search input::placeholder {
+  font-size: 1rem;
+  color: brown;
+  background-size: contain;
+  background-image: url(../img/TTPNeutro.jpg);
+  background-position: 12px;
+}
+
+nav {
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: fixed;
+  height: 350px;
+  top: 80px;
+  left: 25px;
+}
+
+.navlist {
+  flex-direction: column;
+  padding: 3px;
+}
+
+.navlist li:hover .dropdown-content {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+}
+
+.logoCarrito {
+  font-size: x-large;
+}
+
+.categorias {
+  border-radius: 10px;
+  margin: 3em 1em 6em;
+}
+
+.categorias h2 {
+  width: 150px;
+  top: -33.5px;
+  left: auto;
+}
+
+.cardCategoria {
+  width: 250px;
+  height: 250px;
+  margin: 0.5em;
+}
+
+.aceites {
+  border-radius: 10px;
+  margin: 3em 2.5em 6em;
+}
+
+.cardOil {
+  width: 200px;
+  height: 200px;
+  margin: 0.5em;
+}
+
+.aceites h2 {
+  width: 140px;
+  top: -33.5px;
+  left: auto;
+}
+
+.frutosSecos {
+  border-radius: 10px;
+  margin: 3em 2.5em 6em;
+}
+
+.frutosSecos h2 {
+  width: 140px;
+  top: -33.5px;
+  left: auto;
+}
+
+.descripcion {
+  font-size: 0.rem;
+}
+
+.cardFrutosSecos {
+  width: 200px;
+  height: 200px;
+  margin: 0.5em;
+}
+
+.semillas {
+  border-radius: 10px;
+  margin: 3em 2.5em 6em;
+}
+
+.semillas h2 {
+  width: 140px;
+  top: -33.5px;
+  left: auto;
+}
+
+.cardSemillas {
+  width: 200px;
+  height: 200px;
+  margin: 0.5em;
+}
+
+.chat {
+  top: 435px;
+  left: 30px;  
+}
+
+.contact {
+  width: 280px;
+}
+
+.ubic {
+  width: 300px;
+}
+
+.local .map {
+  width: 299px;
+}
+
+.nosotros {
+  margin: 0.7em 0.8em 3.05em 0.8em;
+}
+
+.music {
+  width: 360px;
+
+}
+
+.footerLogin .upDown {
+  display: none;
+}
+
+.footerRegister .upDown {
+  display: none;
+}
+
+.footerAboutUs .upDown {
+  display: none;
+}
+
+ .cardOferta {
+  width: 220px;
+}
+
+.descripcion {
+  font-size: 0.6rem;
+}
+
+
+}
+
+@media (max-width: 500px) {
+
+
+.contact {
+  width: 230px;
+}
+
+.contact textarea {
+  width: 200px;
+}
+
+.input {
+  width: 200px;
+}
+.ubic {
+  width: 230px;
+}
+
+.local .map {
+  width: 228px;
+}
+
+.contactButton button {
+  width: 80px;
+  height: 30px;
+  padding: 0;
+}
+
+.login {
+  width: 230px;
+}
+
+.nuevaCuenta {
+  width: 230px;
+}
+
+.register {
+  width: 230px;
+}
+
+.inputDos {
+  width: 200px;
+}
+
+.inputDos .input {
+  width: 100px;
+}
+
+.cardCategoria {
+  font-size: 2rem;
+  height: 200px;
+  width: 200px;
+}
+
+.cardOil {
+  font-size: 1.5rem;
+  height: 150px;
+  width: 150px;
+}
+
+.cardFrutosSecos {
+  font-size: 1.5rem;
+  height: 150px;
+  width: 150px;
+}
+
+.cardSemillas {
+  font-size: 1.5rem;
+  height: 150px;
+  width: 150px;
+}
+
+.cardTextNosotros {
+  background-position-x: -160px ;
+}
+
+.cardTextNosotros:hover {
+  font-size: medium;
+}
+
+.music {
+  width: 230px;
+}
+audio {width: 190px;}
+
+
+}
+
+@media (max-width: 379px) {
+html {
+  display: none;
+}
+}
