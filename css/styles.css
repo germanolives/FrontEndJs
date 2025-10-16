@@ -34,7 +34,7 @@ header {
   display: none;
 }
 
-h1 {
+.h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1367,7 +1367,7 @@ header {
   border: 1px solid grey;
 }
 
-h1 {
+.h1 {
   grid-column: 2 / 3;
 }
 
