@@ -16,6 +16,8 @@ const elementoContenedorCategorias = document.querySelector('.categorias');
 const elementoContenedorAceites = document.querySelector('.aceites');
 const elementoContenedorFrutosSecos = document.querySelector('.frutosSecos');
 const elementoContenedorSemillas = document.querySelector('.semillas');
+const elementosToggle = document.querySelectorAll('.toggle');
+const elementosToggleOn = document.querySelectorAll('.toggleOn');
 
 let verOcultarLupa = function() {
   elementoH1.classList.toggle('oculto');
@@ -39,9 +41,18 @@ let modoNocturno = function() {
   elementoContenedorSemillas.classList.toggle('semillasDark');
   botonLunaSwitchOff.classList.toggle('oculto');
   botonLunaSwitchOn.classList.toggle('visible');
+  for(i=0;i<elementosToggle.length;i++) {
+    elementosToggle[i].classList.toggle('toggleDark');
+  }
+  for(i=0;i<elementosToggleOn.length;i++) {
+    elementosToggleOn[i].classList.toggle('toggleOnDark');
+  }
 }
+
 
 botonLupaSwitchOff.addEventListener('click', verOcultarLupa);
 botonLupaSwitchOn.addEventListener('click', verOcultarLupa);
 botonLunaSwitchOff.addEventListener('click', modoNocturno);
 botonLunaSwitchOn.addEventListener('click', modoNocturno);
+
+console.log(elementoNav);
