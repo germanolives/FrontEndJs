@@ -1,18 +1,27 @@
 const elementoH1 = document.getElementById('titulo');
 const elementoSearch = document.getElementById('search');
-const botonSwitchOff = document.getElementById('toggleOff');
-const botonSwitchOn = document.getElementById('toggleOn');
+const botonLupaSwitchOff = document.getElementById('lupaToggleOff');
+const botonLupaSwitchOn = document.getElementById('lupaToggleOn');
+const botonLunaSwitchOff = document.getElementById('lunaToggleOff');
+const botonLunaSwitchOn = document.getElementById('lunaToggleOn');
+const elementoBody = document.querySelector('body');
+const elementoTyc = document.querySelector('.tyc');
 
-botonSwitchOff.addEventListener('click', function() {
+let verOcultarLupa = function() {
   elementoH1.classList.toggle('oculto');
   elementoSearch.classList.toggle('visible');
-  botonSwitchOff.classList.toggle('oculto');
-  botonSwitchOn.classList.toggle('visible');
-});
+  botonLupaSwitchOff.classList.toggle('oculto');
+  botonLupaSwitchOn.classList.toggle('visible');
+}
 
-botonSwitchOn.addEventListener('click', function() {
-  elementoH1.classList.toggle('oculto');
-  elementoSearch.classList.toggle('visible');
-  botonSwitchOff.classList.toggle('oculto');
-  botonSwitchOn.classList.toggle('visible');
-});
+let modoNocturno = function() {
+  elementoBody.classList.toggle('dark');
+  elementoTyc.classList.toggle('tycDark');
+  botonLunaSwitchOff.classList.toggle('oculto');
+  botonLunaSwitchOn.classList.toggle('visible');
+}
+
+botonLupaSwitchOff.addEventListener('click', verOcultarLupa);
+botonLupaSwitchOn.addEventListener('click', verOcultarLupa);
+botonLunaSwitchOff.addEventListener('click', modoNocturno);
+botonLunaSwitchOn.addEventListener('click', modoNocturno);

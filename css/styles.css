@@ -9,13 +9,13 @@
 
 header {
     display: grid;
-    grid-template-columns: 90px auto 1fr;
+    grid-template-columns: 90px auto 1fr auto;
     grid-template-rows: 60px 30px;
     gap: 0.3rem;
     margin-top: 0.25rem;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
-    background-color:white;
+    /* background-color:white; */
 }
 
 .logo {
@@ -36,8 +36,9 @@ header {
 
 .h1 {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
+  justify-content: center;
   color: brown;
   background-color: bisque;
   border-radius: 5px;
@@ -45,7 +46,7 @@ header {
   border: 1px solid grey;
 }
 
-.switchLupa {
+.switchLupa, .modoOscuro {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -69,6 +70,7 @@ header {
 }
 
 h1 {
+
   display: flex;
 }
 
@@ -89,6 +91,10 @@ h1 {
   padding-top: 0.87rem;
   background-color: rgb(255, 244, 229);
   width: 398px;
+}
+
+.dark {
+  background-color: black;
 }
 
 .oculto {
@@ -122,7 +128,7 @@ h1 {
 }
 
 nav {
-  grid-column: 2 / 4;
+  grid-column: 2 / 5;
   display: flex;
   background-color: brown;
   border-radius: 5px;
@@ -704,6 +710,19 @@ h2 a {
   align-items: center;
   background-color: rgba(255, 228, 196, 0.6);
   color: brown;
+ }
+
+ .tycDark {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+  color: rgb(255, 228, 196);
+;
  }
 
 /*-------------------------------------------------------------------------------------------------------------------*/
