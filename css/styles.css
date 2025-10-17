@@ -24,7 +24,7 @@ header {
     border: 1px solid grey;
     background-image: url(../img/logo.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position-x: center ;
     background-position-y: center;
 }
