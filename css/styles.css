@@ -46,6 +46,18 @@ header {
   border: 1px solid grey;
 }
 
+.h1Dark {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: center;
+  color: bisque;
+  background-color: brown;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid grey;
+}
+
 .switchLupa, .modoOscuro {
   display: flex;
   flex-direction: column;
@@ -649,14 +661,23 @@ h2 a {
 .threads {
   color: black;
 }
+.tiktok {
+  color: black;
+}
 .twitter {
   color: black;
 }
 .youtube {
   color: #c4302b;
 }
-.tiktok {
-  color: black;
+.threadsDark {
+  color: white;
+}
+.tiktokDark {
+  color: white;
+}
+.twitterDark {
+  color: white;
 }
 
 .chat {

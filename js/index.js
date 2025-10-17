@@ -6,6 +6,10 @@ const botonLunaSwitchOff = document.getElementById('lunaToggleOff');
 const botonLunaSwitchOn = document.getElementById('lunaToggleOn');
 const elementoBody = document.querySelector('body');
 const elementoTyc = document.querySelector('.tyc');
+const elementoThreads = document.querySelector('.threads');
+const elementoTiktok = document.querySelector('.tiktok');
+const elementoTwitter = document.querySelector('.twitter');
+const elementoClassH1 = document.querySelector('.h1');
 
 let verOcultarLupa = function() {
   elementoH1.classList.toggle('oculto');
@@ -17,6 +21,10 @@ let verOcultarLupa = function() {
 let modoNocturno = function() {
   elementoBody.classList.toggle('dark');
   elementoTyc.classList.toggle('tycDark');
+  elementoThreads.classList.toggle('threadsDark');
+  elementoTiktok.classList.toggle('tiktokDark');
+  elementoTwitter.classList.toggle('twitterDark');
+  elementoClassH1.classList.toggle('h1Dark');
   botonLunaSwitchOff.classList.toggle('oculto');
   botonLunaSwitchOn.classList.toggle('visible');
 }
