@@ -15,7 +15,6 @@ header {
     margin-top: 0.25rem;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
-    /* background-color:white; */
 }
 
 .logo {
@@ -30,13 +29,16 @@ header {
     background-position-y: center;
 }
 
+.logoDark {
+    box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
 .logo img {
   display: none;
 }
 
 .h1 {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   justify-content: center;
   color: brown;
@@ -47,21 +49,16 @@ header {
 }
 
 .h1Dark {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  justify-content: center;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
   color: bisque;
   background-color: brown;
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  border: 1px solid grey;
 }
 
 .switchLupa, .modoOscuro {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 
 .toggle, .toggleOn {
@@ -75,6 +72,10 @@ header {
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border: 1px solid grey;
+}
+
+.toggleDark, .toggleOnDark {
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .toggleOn {
@@ -139,13 +140,17 @@ h1 {
   border-radius: 0px 5px 5px 0px;
 }
 
-nav {
+.nav {
   grid-column: 2 / 5;
   display: flex;
   background-color: brown;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border: 1px solid grey;
+}
+
+.navDark {
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .navlist {
@@ -251,8 +256,6 @@ li .acaEstoy {
   padding: 0 5px;
 } 
 
-
-
 .removeCart span {
   color: yellow;
 }
@@ -277,7 +280,7 @@ li .acaEstoy {
 .categorias {
   display: flex;
   flex-direction: column;
-  background-color:aquamarine;
+  background-color:hsl(160, 100%, 75%);
   margin: 6em 3em 6em;
   justify-content: center;
   align-items: center;
@@ -285,6 +288,11 @@ li .acaEstoy {
   border: 1px solid hsl(0, 0%, 50%);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+
+.categoriasDark {
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+  background-color:hsl(160, 100%, 25%);
 }
 
 .categorias div {
@@ -349,6 +357,11 @@ li .acaEstoy {
   border: 1px solid hsl(0, 0%, 50%);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+
+.aceitesDark {
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+  background-color:hsl(180, 100%, 25%);
 }
 
 .aceites div {
@@ -440,6 +453,11 @@ li .acaEstoy {
   border: 1px solid hsl(0, 0%, 50%);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+
+.frutosSecosDark {
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+  background-color: hsl(33, 100%, 25%);
 }
 
 .frutosSecos div {
@@ -534,6 +552,13 @@ li .acaEstoy {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   position: relative;
 }
+
+.semillasDark {
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
+  background-color: hsl(34, 57%, 25%);
+
+}
+
 
 .semillas div {
   display: flex;
@@ -815,8 +840,8 @@ h2 a {
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background-color:antiquewhite;
+  
 }
-
 
 .llegar p {
   font-size: larger;
@@ -1365,7 +1390,7 @@ header {
     grid-row: 1 / 2;
 }
 
-nav {
+.nav {
   grid-column: 1 / 5;
 }
 
@@ -1490,7 +1515,7 @@ h1 {
   background-position: 12px;
 }
 
-nav {
+.nav {
   flex-direction: column;
   justify-content: center;
   align-items: start;
