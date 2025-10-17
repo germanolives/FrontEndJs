@@ -1357,7 +1357,7 @@ body {
 }
 
 header {
-    grid-template-columns: 60px auto 1fr;
+    grid-template-columns: 60px auto 1fr auto;
     grid-template-rows: 60px 25px;
 }
 
@@ -1366,7 +1366,7 @@ header {
 }
 
 nav {
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
 }
 
 .categorias h2 {
@@ -1448,6 +1448,17 @@ header {
   justify-content: space-around;
 }
 
+.modoOscuro {
+  position: fixed;
+  top: 113px;
+  left: 26px;
+  z-index: 1;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .logo img {
   display: block;
   border-radius: 5px;
@@ -1485,7 +1496,7 @@ nav {
   align-items: start;
   position: fixed;
   height: 320px;
-  top: 113px;
+  top: 146px;
   left: 26px;
 }
 
@@ -1577,7 +1588,7 @@ nav {
 }
 
 .chat {
-  top: 435px;
+  top: 470px;
   left: 30px;  
 }
 
