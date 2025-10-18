@@ -16,6 +16,10 @@
     const threads = document.querySelector('.threads');
     const tiktok = document.querySelector('.tiktok');
     const twitter = document.querySelector('.twitter');
+    const contenedorCategorias = document.querySelector('.categorias');
+    const contenedorAceites = document.querySelector('.aceites');
+    const contenedorFrutosSecos = document.querySelector('.frutosSecos');
+    const contenedorSemillas = document.querySelector('.semillas');
     body.classList.toggle('dark');
     classLogo.classList.toggle('logoDark');
     classH1.classList.toggle('h1Dark');
@@ -27,6 +31,10 @@
     threads.classList.toggle('threadsDark');
     tiktok.classList.toggle('tiktokDark');
     twitter.classList.toggle('twitterDark');
+    contenedorCategorias.classList.toggle('categoriasDark');
+    contenedorAceites.classList.toggle('aceitesDark');
+    contenedorFrutosSecos.classList.toggle('frutosSecosDark');
+    contenedorSemillas.classList.toggle('semillasDark');
  }
 
 const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
@@ -35,6 +43,28 @@ const botonClaroOscuro = document.getElementById('boton-claroOscuro');
 
 botonTituloBusqueda.addEventListener('click', switchTituloBusqueda);
 botonClaroOscuro.addEventListener('click', switchClaroOscuro);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
