@@ -1,15 +1,40 @@
-const h1 = document.getElementById('titulo');
-const search = document.getElementById('search');
-const claroOscuro = document.getElementById('boton-claroOscuro');
-const tituloBusqueda = document.getElementById('boton-tituloBusqueda');
-
  let switchTituloBusqueda = function() {
-   h1.classList.toggle('oculto');
-   search.classList.toggle('visible');
-   tituloBusqueda.classList.toggle('activo');
+    const h1 = document.getElementById('titulo');
+    const search = document.getElementById('search');
+    h1.classList.toggle('oculto');
+    search.classList.toggle('visible');
+    this.classList.toggle('activo');
  }
 
- tituloBusqueda.addEventListener('click', switchTituloBusqueda);
+ let switchClaroOscuro = function() {
+    const body = document.querySelector('body');
+    const classLogo = document.querySelector('.logo');
+    const classH1 = document.getElementById('divH1');
+    const classNav = document.querySelector('.nav');
+    const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
+    const tyc = document.querySelector('.tyc');
+    const threads = document.querySelector('.threads');
+    const tiktok = document.querySelector('.tiktok');
+    const twitter = document.querySelector('.twitter');
+    body.classList.toggle('dark');
+    classLogo.classList.toggle('logoDark');
+    classH1.classList.toggle('h1Dark');
+    classNav.classList.toggle('navDark');
+    botonTituloBusqueda.classList.toggle('tituloBusquedaDark');
+    this.classList.toggle('activo');
+    this.classList.toggle('claroOscuroDark');
+    tyc.classList.toggle('tycDark');
+    threads.classList.toggle('threadsDark');
+    tiktok.classList.toggle('tiktokDark');
+    twitter.classList.toggle('twitterDark');
+ }
+
+const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
+const botonClaroOscuro = document.getElementById('boton-claroOscuro');
+
+
+botonTituloBusqueda.addEventListener('click', switchTituloBusqueda);
+botonClaroOscuro.addEventListener('click', switchClaroOscuro);
 
 
 
@@ -43,7 +68,9 @@ const tituloBusqueda = document.getElementById('boton-tituloBusqueda');
 
 
 
- 
+
+
+
 
 
 // const elementoH1 = document.getElementById('titulo');
