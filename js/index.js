@@ -1,4 +1,4 @@
- let switchTituloBusqueda = function() {
+  let switchTituloBusqueda = function() {
     const h1 = document.getElementById('titulo');
     const search = document.getElementById('search');
     h1.classList.toggle('oculto');
@@ -37,16 +37,18 @@
     contenedorSemillas.classList.toggle('semillasDark');
  }
 
-const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
-const botonClaroOscuro = document.getElementById('boton-claroOscuro');
+// const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
+// const botonClaroOscuro = document.getElementById('boton-claroOscuro');
 
 
-botonTituloBusqueda.addEventListener('click', switchTituloBusqueda);
-botonClaroOscuro.addEventListener('click', switchClaroOscuro);
+// botonTituloBusqueda.addEventListener('click', switchTituloBusqueda);
+// botonClaroOscuro.addEventListener('click', switchClaroOscuro);
 
 
 
+document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
 
+document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
 
 
 
