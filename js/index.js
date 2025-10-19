@@ -143,13 +143,13 @@ else {
    switchTitulo();
 }
 
-let estadoDarkActivo = localStorage.getItem('DarkOn');
-if (estadoDarkActivo == 'true') {
-   switchOscuro();
-}
-else {
-   switchClaro();
-}
+// let estadoDarkActivo = localStorage.getItem('DarkOn');
+// if (estadoDarkActivo == 'true') {
+//    switchOscuro();
+// }
+// else {
+//    switchClaro();
+// }
 
 
 
