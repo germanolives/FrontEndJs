@@ -21,8 +21,6 @@ function switchBusqueda() {
    boton.classList.add('activo');
    localStorage.setItem('searchOn', 'true');
 }
-
-
 function switchClaroOscuro() {
    const body = document.querySelector('body');
    const classLogo = document.querySelector('.logo');
@@ -78,16 +76,12 @@ function switchOscuro() {
 }
 
 
-let estadoSearchActivo = localStorage.getItem('searchOn');
-if (estadoSearchActivo == 'true') {
+if (localStorage.getItem('searchOn') == 'true') {
    switchBusqueda();
 }
-
-let estadoDarkActivo = localStorage.getItem('DarkOn');
-if (estadoDarkActivo == 'true') {
+if (localStorage.getItem('DarkOn') == 'true') {
    switchOscuro();
 }
-
 
 
 document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
@@ -253,3 +247,6 @@ document.getElementById('boton-claroOscuro').addEventListener('click', switchCla
 //    boton.classList.remove('activo');
 //    localStorage.setItem('DarkOn', 'false');  
 // }
+
+// let estadoSearchActivo = localStorage.getItem('searchOn');
+// let estadoDarkActivo = localStorage.getItem('DarkOn');
