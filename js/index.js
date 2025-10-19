@@ -1,53 +1,159 @@
-  let switchTituloBusqueda = function() {
+function switchTituloBusqueda() {
     const h1 = document.getElementById('titulo');
     const search = document.getElementById('search');
     h1.classList.toggle('oculto');
     search.classList.toggle('visible');
     this.classList.toggle('activo');
- }
-
- let switchClaroOscuro = function() {
-    const body = document.querySelector('body');
-    const classLogo = document.querySelector('.logo');
-    const classH1 = document.getElementById('divH1');
-    const classNav = document.querySelector('.nav');
-    const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
-    const tyc = document.querySelector('.tyc');
-    const threads = document.querySelector('.threads');
-    const tiktok = document.querySelector('.tiktok');
-    const twitter = document.querySelector('.twitter');
-    const contenedorCategorias = document.querySelector('.categorias');
-    const contenedorAceites = document.querySelector('.aceites');
-    const contenedorFrutosSecos = document.querySelector('.frutosSecos');
-    const contenedorSemillas = document.querySelector('.semillas');
-    body.classList.toggle('dark');
-    classLogo.classList.toggle('logoDark');
-    classH1.classList.toggle('h1Dark');
-    classNav.classList.toggle('navDark');
-    botonTituloBusqueda.classList.toggle('tituloBusquedaDark');
-    this.classList.toggle('activo');
-    this.classList.toggle('claroOscuroDark');
-    tyc.classList.toggle('tycDark');
-    threads.classList.toggle('threadsDark');
-    tiktok.classList.toggle('tiktokDark');
-    twitter.classList.toggle('twitterDark');
-    contenedorCategorias.classList.toggle('categoriasDark');
-    contenedorAceites.classList.toggle('aceitesDark');
-    contenedorFrutosSecos.classList.toggle('frutosSecosDark');
-    contenedorSemillas.classList.toggle('semillasDark');
- }
-
-// const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
-// const botonClaroOscuro = document.getElementById('boton-claroOscuro');
+    let marcadorActivo = this.classList.contains('activo');
+    if (marcadorActivo) {
+      localStorage.setItem('searchOn', 'true');
+    }
+    else {
+      localStorage.setItem('searchOn', 'false');
+    }
+}
+function switchBusqueda() {
+   const h1 = document.getElementById('titulo');
+   const search = document.getElementById('search');
+   const boton = document.getElementById('boton-tituloBusqueda');
+   h1.classList.add('oculto');
+   search.classList.add('visible');
+   boton.classList.add('activo');
+   localStorage.setItem('searchOn', 'true');
+}
+function switchTitulo() {
+   const h1 = document.getElementById('titulo');
+   const search = document.getElementById('search');
+   const boton = document.getElementById('boton-tituloBusqueda');
+   h1.classList.remove('oculto');
+   search.classList.remove('visible');
+   boton.classList.remove('activo');
+   localStorage.setItem('searchOn', 'false');
+}
 
 
-// botonTituloBusqueda.addEventListener('click', switchTituloBusqueda);
-// botonClaroOscuro.addEventListener('click', switchClaroOscuro);
+function switchClaroOscuro() {
+   const body = document.querySelector('body');
+   const classLogo = document.querySelector('.logo');
+   const classH1 = document.getElementById('divH1');
+   const classNav = document.querySelector('.nav');
+   const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
+   const tyc = document.querySelector('.tyc');
+   const threads = document.querySelector('.threads');
+   const tiktok = document.querySelector('.tiktok');
+   const twitter = document.querySelector('.twitter');
+   // const contenedorCategorias = document.querySelector('.categorias');
+   // const contenedorAceites = document.querySelector('.aceites');
+   // const contenedorFrutosSecos = document.querySelector('.frutosSecos');
+   // const contenedorSemillas = document.querySelector('.semillas');
+   body.classList.toggle('dark');
+   classLogo.classList.toggle('logoDark');
+   classH1.classList.toggle('h1Dark');
+   classNav.classList.toggle('navDark');
+   botonTituloBusqueda.classList.toggle('tituloBusquedaDark');
+   tyc.classList.toggle('tycDark');
+   threads.classList.toggle('threadsDark');
+   tiktok.classList.toggle('tiktokDark');
+   twitter.classList.toggle('twitterDark');
+   // contenedorCategorias.classList.toggle('categoriasDark');
+   // contenedorAceites.classList.toggle('aceitesDark');
+   // contenedorFrutosSecos.classList.toggle('frutosSecosDark');
+   // contenedorSemillas.classList.toggle('semillasDark');
+   this.classList.toggle('claroOscuroDark');
+   this.classList.toggle('activo');
+   let marcadorActivo = this.classList.contains('activo');
+    if (marcadorActivo) {
+      localStorage.setItem('DarkOn', 'true');
+    }
+    else {
+      localStorage.setItem('DarkOn', 'false');
+    }
+}
+
+function switchOscuro() {
+   const body = document.querySelector('body');
+   const classLogo = document.querySelector('.logo');
+   const classH1 = document.getElementById('divH1');
+   const classNav = document.querySelector('.nav');
+   const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
+   const tyc = document.querySelector('.tyc');
+   const threads = document.querySelector('.threads');
+   const tiktok = document.querySelector('.tiktok');
+   const twitter = document.querySelector('.twitter');
+   // const contenedorCategorias = document.querySelector('.categorias');
+   // const contenedorAceites = document.querySelector('.aceites');
+   // const contenedorFrutosSecos = document.querySelector('.frutosSecos');
+   // const contenedorSemillas = document.querySelector('.semillas');
+   const boton = document.getElementById('boton-claroOscuro');
+   body.classList.add('dark');
+   classLogo.classList.add('logoDark');
+   classH1.classList.add('h1Dark');
+   classNav.classList.add('navDark');
+   botonTituloBusqueda.classList.add('tituloBusquedaDark');
+   tyc.classList.add('tycDark');
+   threads.classList.add('threadsDark');
+   tiktok.classList.add('tiktokDark');
+   twitter.classList.add('twitterDark');
+   // contenedorCategorias.classList.add('categoriasDark');
+   // contenedorAceites.classList.add('aceitesDark');
+   // contenedorFrutosSecos.classList.add('frutosSecosDark');
+   // contenedorSemillas.classList.add('semillasDark');
+   boton.classList.add('claroOscuroDark');
+   boton.classList.add('activo');
+   localStorage.setItem('DarkOn', 'true');
+}
+
+function switchClaro() {
+   const classLogo = document.querySelector('.logo');
+   const classH1 = document.getElementById('divH1');
+   const classNav = document.querySelector('.nav');
+   const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
+   const tyc = document.querySelector('.tyc');
+   const threads = document.querySelector('.threads');
+   const tiktok = document.querySelector('.tiktok');
+   const twitter = document.querySelector('.twitter');
+   // const contenedorCategorias = document.querySelector('.categorias');
+   // const contenedorAceites = document.querySelector('.aceites');
+   // const contenedorFrutosSecos = document.querySelector('.frutosSecos');
+   // const contenedorSemillas = document.querySelector('.semillas');
+   const boton = document.getElementById('boton-claroOscuro');
+   body.classList.remove('dark');
+   classLogo.classList.remove('logoDark');
+   classH1.classList.remove('h1Dark');
+   classNav.classList.remove('navDark');
+   botonTituloBusqueda.classList.remove('tituloBusquedaDark');
+   tyc.classList.remove('tycDark');
+   threads.classList.remove('threadsDark');
+   tiktok.classList.remove('tiktokDark');
+   twitter.classList.remove('twitterDark');
+   // contenedorCategorias.classList.remove('categoriasDark');
+   // contenedorAceites.classList.remove('aceitesDark');
+   // contenedorFrutosSecos.classList.remove('frutosSecosDark');
+   // contenedorSemillas.classList.remove('semillasDark');
+   boton.classList.remove('claroOscuroDark');
+   boton.classList.remove('activo');
+   localStorage.setItem('DarkOn', 'false');  
+}
+
+let estadoSearchActivo = localStorage.getItem('searchOn');
+if (estadoSearchActivo == 'true') {
+   switchBusqueda();
+}
+else {
+   switchTitulo();
+}
+
+let estadoDarkActivo = localStorage.getItem('DarkOn');
+if (estadoDarkActivo == 'true') {
+   switchOscuro();
+}
+else {
+   switchClaro();
+}
 
 
 
 document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
-
 document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
 
 
@@ -162,4 +268,10 @@ document.getElementById('boton-claroOscuro').addEventListener('click', switchCla
 // botonLunaSwitchOff.addEventListener('click', modoNocturno);
 // botonLunaSwitchOn.addEventListener('click', modoNocturno);
 
+// const botonTituloBusqueda = document.getElementById('boton-tituloBusqueda');
+// const botonClaroOscuro = document.getElementById('boton-claroOscuro');
+
+
+// botonTituloBusqueda.addEventListener('click', switchTituloBusqueda);
+// botonClaroOscuro.addEventListener('click', switchClaroOscuro);
 
