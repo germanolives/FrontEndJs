@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>shoppingCart</title>
+</head>
+<body>
+    <header>
+        <h1>Tienda Online</h1>
+    </header>
+    <main>
+        <div id="productos">
+            <h2>Productos Disponibles</h2>
+            <ul>
+                <li>
+                    Producto 1 - $10
+                    <button class="agregar-carrito" data-id="1" data-nombre="Producto 1" data-precio="10">Agregar al
+                        Carrito</button>
+                </li>
+                <li>
+                    Producto 2 - $15
+                    <button class="agregar-carrito" data-id="2" data-nombre="Producto 2" data-precio="15">Agregar al
+                        Carrito</button>
+                </li>
+                <li>
+                    Producto 3 - $20
+                    <button class="agregar-carrito" data-id="3" data-nombre="Producto 3" data-precio="20">Agregar al
+                        Carrito</button>
+                </li>
+            </ul>
+        </div>
+        <div id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

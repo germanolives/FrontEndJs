@@ -95,10 +95,10 @@
                         <li class="logoCarrito"><a href="./shoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                         <li class="counterCarrito"><sub>4</sub>
                             <ul class="detalleCounterCarrito">
-                                <li><a class="detalleProd" href="#"><span>Aceite de Coco</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
-                                <li><a class="detalleProd" href="#"><span>Anacardos</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
-                                <li><a class="detalleProd" href="#"><span>Aceite de Oliva</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
-                                <li><a class="detalleProd" href="#"><span>Macadamias</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
+                                <li><a class="detalleProd" href="#"><span>Aceite de Coco</span><span>1,5l</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
+                                <li><a class="detalleProd" href="#"><span>Anacardos</span><span>150g</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
+                                <li><a class="detalleProd" href="#"><span>Aceite de Oliva</span><span>750cc</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
+                                <li><a class="detalleProd" href="#"><span>Macadamias</span><span>250g</span><span>504</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -109,17 +109,18 @@
     </header>
     <main>
         <section class="ofertas">
-            <article class="cardOferta">
+            <article class="cardOferta" id="almendras">
                 <h2>ALMENDRAS</h2>
                 <img src="./img/frutosSecos/almendras.jpg" width="250" height="140" alt="nueces">
                 <p class="descripcion">Del almendro, y tal como otros frutos secos, la semilla es la parte que se consume, la cual
                     está envuelta por una película de color canela, además de una cáscara exterior que no es comestible, que
                     representa un peso importante.</p>
                 <div class="precio">
-                    <p>$39.500</p>
+                    <span>$</span><p id="valorAlmendra"></p>
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
                 <form action="#" class="compra">
+                    <input class="precioProducto" type="hidden" name="precioAlmendra" value="38500" id="precioAlmendra">
                     <label for="presentacionAlmendra"></label>
                     <select name="presentacionAlmendra" id="presentacionAlmendra">
                         <option value="" disabled selected>Pack</option>
@@ -128,20 +129,21 @@
                         <option value="8">8 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
-                    <input type="number" min="0" id="cantidad" name="cantidad" placeholder="Cantidad">
+                    <input class="cantidadProducto" type="number" min="0" id="cantidadAlmendra" name="cantidadAlmendra" placeholder="Cantidad" value="">
                     <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
                 </form>
             </article>
-            <article class="cardOferta">
+            <article class="cardOferta" id="avellanas">
                 <h2>AVELLANAS</h2>
                 <img src="./img/frutosSecos/avellanas.jpg" width="250" height="140" alt="nueces">
                 <p class="descripcion">Del avellano, del Mediterráneo, con una cáscara leñosa y una semilla
                     comestible rica en grasas saludables, aminoácidos escenciales, vitaminas y minerales. Consumidos de diversas formas para obtener fibras y antioxidantes.</p>
                 <div class="precio">
-                    <p>$28.700</p>
+                    <span>$</span><p id="valorAvellana"></p>
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
                 <form action="#" class="compra">
+                    <input class="precioProducto" type="hidden" name="precioAvellana" value="28700" id="precioAvellana">
                     <label for="presentacionAvellana"></label>
                     <select name="presentacionAvellana" id="presentacionAvellana">
                         <option value="" disabled selected>Pack</option>
@@ -150,21 +152,22 @@
                         <option value="5">5 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
-                    <input type="number" min="0" id="cantidad" name="cantidad" placeholder="Cantidad">
+                    <input type="number" min="0" id="cantidadAvellana" name="cantidadAvellana" placeholder="Cantidad">
                     <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
                 </form>
             </article>
-            <article class="cardOferta">
+            <article class="cardOferta" id="nueces">
                 <h2 class=>NUECES</h2>
                 <img src="./img/frutosSecos/nueces.jpg" width="250" height="140" alt="nueces">
                 <p class="descripcion">Del árbol nogal, ricos en grasas saludables, proteínas, antioxidantes y minerales,
                     que ofrecen beneficios como la salud cardiovascular y cerebral. Se pueden consumir solas,
                     en ensaladas, postre o como parte de platos salados.</p>
                 <div class="precio">
-                    <p>$19.990</p>
+                    <span>$</span><p class="valorNuez"></p>
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
                 <form action="#" class="compra">
+                    <input class="precioProducto" type="hidden" name="precioNuez" value="19990" id="precioNuez">
                     <label for="presentacionNuez"></label>
                     <select name="presentacionNuez" id="presentacionNuez">
                         <option value="" disabled selected>Pack</option>
@@ -174,7 +177,7 @@
                         <option value="15">15 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
-                    <input type="number" min="0" id="cantidad" name="cantidad" placeholder="Cantidad">
+                    <input type="number" min="0" id="cantidadNuez" name="cantidadNuez" placeholder="Cantidad">
                     <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
                 </form>
             </article>

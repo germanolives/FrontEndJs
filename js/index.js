@@ -43,12 +43,12 @@ function switchClaroOscuro() {
    this.classList.toggle('claroOscuroDark');
    this.classList.toggle('activo');
    let marcadorActivo = this.classList.contains('activo');
-    if (marcadorActivo) {
+   if (marcadorActivo) {
       localStorage.setItem('DarkOn', 'true');
-    }
-    else {
+   }
+   else {
       localStorage.setItem('DarkOn', 'false');
-    }
+   }
 }
 function switchOscuro() {
    const body = document.querySelector('body');
@@ -88,9 +88,21 @@ document.getElementById('boton-tituloBusqueda').addEventListener('click', switch
 document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
 
 
+function precioTextoANumero(precio) {
+   precio = parseFloat(precio.split('.').join('').replace(',', '.'));
+   return precio;
+}
+
+// let precio = document.getElementById('valorAlmendra').textContent;
+// precio = precioTextoANumero(precio);
+// document.getElementById('precioAlmendra').value = precio;
 
 
-
+let precio = document.querySelectorAll('.compra .precioProducto');
+let valorPrecio = document.querySelectorAll('.precio p');
+for(i=0;precio.length;i++) {
+   valorPrecio[i].textContent = precio[i].value;
+}
 
 
 
