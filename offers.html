@@ -119,17 +119,18 @@
                     <span>$</span><p id="valorAlmendra"></p>
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
-                <form action="#" class="compra">
-                    <input class="precioProducto" type="hidden" name="precioAlmendra" value="38500" id="precioAlmendra">
+                <form action="./shoppingCart.html" method="get" class="compra">
+                    <input class="idProducto" type="hidden" name="id" value="1" id="idAlmendra">
+                    <input class="precioProducto" type="hidden" name="precio" value="38500" id="precioAlmendra">
                     <label for="presentacionAlmendra"></label>
-                    <select name="presentacionAlmendra" id="presentacionAlmendra">
+                    <select name="presentacion" id="presentacionAlmendra">
                         <option value="" disabled selected>Pack</option>
                         <option value="1">1 Kilo</option>
                         <option value="4">4 Kilos</option>
                         <option value="8">8 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
-                    <input class="cantidadProducto" type="number" min="0" id="cantidadAlmendra" name="cantidadAlmendra" placeholder="Cantidad" value="">
+                    <input class="cantidadProducto" type="number" min="0" id="cantidadAlmendra" name="cantidad" placeholder="Cantidad" value="">
                     <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
                 </form>
             </article>
@@ -143,16 +144,17 @@
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
                 <form action="#" class="compra">
-                    <input class="precioProducto" type="hidden" name="precioAvellana" value="28700" id="precioAvellana">
+                    <input class="idProducto" type="hidden" name="id" value="2" id="idAvellana">
+                    <input class="precioProducto" type="hidden" name="precio" value="28700" id="precioAvellana">
                     <label for="presentacionAvellana"></label>
-                    <select name="presentacionAvellana" id="presentacionAvellana">
+                    <select name="presentacion" id="presentacionAvellana">
                         <option value="" disabled selected>Pack</option>
                         <option value="1">1 Kilo</option>
                         <option value="3">3 Kilos</option>
                         <option value="5">5 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
-                    <input type="number" min="0" id="cantidadAvellana" name="cantidadAvellana" placeholder="Cantidad">
+                    <input type="number" min="0" id="cantidadAvellana" name="cantidad" placeholder="Cantidad">
                     <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
                 </form>
             </article>
@@ -167,9 +169,10 @@
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
                 <form action="#" class="compra">
-                    <input class="precioProducto" type="hidden" name="precioNuez" value="19990" id="precioNuez">
+                    <input class="idProducto" type="hidden" name="id" value="3" id="idNuez">
+                    <input class="precioProducto" type="hidden" name="precio" value="19990" id="precioNuez">
                     <label for="presentacionNuez"></label>
-                    <select name="presentacionNuez" id="presentacionNuez">
+                    <select name="presentacion" id="presentacionNuez">
                         <option value="" disabled selected>Pack</option>
                         <option value="1">1 Kilo</option>
                         <option value="2">2 Kilos</option>
@@ -177,7 +180,7 @@
                         <option value="15">15 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
-                    <input type="number" min="0" id="cantidadNuez" name="cantidadNuez" placeholder="Cantidad">
+                    <input type="number" min="0" id="cantidadNuez" name="cantidad" placeholder="Cantidad">
                     <button type="submit""><i class="fa-solid fa-cart-shopping"></i></button>
                 </form>
             </article>
