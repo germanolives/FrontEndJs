@@ -100,14 +100,77 @@ function precioTextoANumero(precio) {
 
 let precio = document.querySelectorAll('.compra .precioProducto');
 let valorPrecio = document.querySelectorAll('.precio p');
-for(i=0;precio.length;i++) {
+for(i=0;i<precio.length;i++) {
    valorPrecio[i].textContent = precio[i].value;
 }
 
 
+//--------------------------------------------------------------------------------------------------------------------//
+
+
+const offersSection = document.querySelector('.ofertas');
+const botonAgregarCarrito = document.querySelectorAll('.agregar-carrito');
+const articuloFrutoSecto = document.querySelectorAll('.cardOferta');
+const formArticulo = document.querySelectorAll('.compra');
 
 
 
+offersSection.addEventListener('submit', (event)=>{
+   event.preventDefault();
+   const formClick = event.target;
+   if(formClick.classList.contains('compra')){
+      if(formClick.querySelector('.cantidadProducto').value>0 && formClick.querySelector('.presentacion').value>0){
+         const fechaPedido = new Date().toISOString();
+         const objetoProducto = {
+            productoNombre: formClick.querySelector('.idProducto').value,
+            productoPrecio: formClick.querySelector('.precioProducto').value,
+            productoPresentacion: formClick.querySelector('.presentacion').value,
+            productoCantidad: formClick.querySelector('.cantidadProducto').value,
+            productoCompra: parseFloat(formClick.querySelector('.precioProducto').value) * parseInt(formClick.querySelector('.cantidadProducto').value),
+            productoRutaImagen: formClick.parentNode.querySelector('img').getAttribute('src'),
+            productoAnchoImagen: formClick.parentNode.querySelector('img').getAttribute('width'),
+            productoAltoImagen: formClick.parentNode.querySelector('img').getAttribute('height'),
+            productoDescripcion: formClick.parentNode.querySelector('.descripcion').innerText,
+            fechaPedido: fechaPedido,
+         }
+         console.log(objetoProducto);
+         const listaCompras = (JSON.parse(localStorage.getItem('carrito')) || []);
+         listaCompras.push(objetoProducto);
+         localStorage.setItem('carrito', JSON.stringify(listaCompras));
+      }
+
+   }
+} );
+
+
+
+
+
+
+
+
+
+
+
+
+
+function agregarProducto(event) {
+    let producto = {
+        id: event.target.getAttribute('data-id'),
+        nombre: event.target.getAttribute('data-nombre'),
+        precio: event.target.getAttribute('data-precio')
+    };
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.push(producto);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    cargarCarrito();
+}
+
+// Agregar producto al carrito
+let botonesAgregar = document.querySelectorAll('.agregar-carrito');
+for (let i = 0; i < botonesAgregar.length; i++) {
+    botonesAgregar[i].addEventListener('submit', agregarProducto);
+}
 
 
 
