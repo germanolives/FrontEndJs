@@ -94,7 +94,7 @@
                 <li>
                     <ul class="carrito">
                         <li class="logoCarrito"><a href="./shoppingCart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li class="counterCarrito"><sub>4</sub>
+                        <li class="counterCarrito"><sub></sub>
                             <ul class="detalleCounterCarrito">
                                 <li><a class="detalleProd" href="#"><span>Aceite de Coco</span><span>1,5l</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
                                 <li><a class="detalleProd" href="#"><span>Anacardos</span><span>150g</span><span>4</span><span>45000</span></a><a class="removeCart" href=""><span>X</span></a></li>
@@ -120,15 +120,15 @@
                     <span>$</span><p id="valorAlmendra"></p>
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
-                <form action="./shoppingCart.html" method="get" class="compra">
+                <form action="#" class="compra" name="aquamarine">
                     <input class="idProducto" type="hidden" name="id" value="almendra" id="idAlmendra">
                     <input class="precioProducto" type="hidden" name="precio" value="38500" id="precioAlmendra">
                     <label for="presentacionAlmendra"></label>
                     <select name="presentacion" class="presentacion" id="presentacionAlmendra">
                         <option value="" disabled selected>Pack</option>
-                        <option value="1">1 Kilo</option>
-                        <option value="4">4 Kilos</option>
-                        <option value="8">8 Kilos</option>
+                        <option class="optPresent" value="1">1 Kilo</option>
+                        <option class="optPresent" value="4">4 Kilos</option>
+                        <option class="optPresent" value="8">8 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
                     <input class="cantidadProducto" type="number" min="0" id="cantidadAlmendra" name="cantidad" placeholder="Cantidad" value="">
@@ -144,15 +144,15 @@
                     <span>$</span><p id="valorAvellana"></p>
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
-                <form action="#" class="compra">
+                <form action="#" class="compra" name="aqua">
                     <input class="idProducto" type="hidden" name="id" value="avellana" id="idAvellana">
                     <input class="precioProducto" type="hidden" name="precio" value="28700" id="precioAvellana">
                     <label for="presentacionAvellana"></label>
                     <select name="presentacion" class="presentacion" id="presentacionAvellana">
-                        <option value="" disabled selected>Pack</option>
-                        <option value="1">1 Kilo</option>
-                        <option value="3">3 Kilos</option>
-                        <option value="5">5 Kilos</option>
+                        <option  value="" disabled selected>Pack</option>
+                        <option class="optPresent" value="1">1 Kilo</option>
+                        <option class="optPresent" value="3">3 Kilos</option>
+                        <option class="optPresent" value="5">5 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
                     <input class="cantidadProducto" type="number" min="0" id="cantidadAvellana" name="cantidad" placeholder="Cantidad">
@@ -169,16 +169,16 @@
                     <span>$</span><p class="valorNuez"></p>
                     <small class="condicionesPrecio">Precio por kilo sin impuestos</small>
                 </div>
-                <form action="#" class="compra">
+                <form action="#" class="compra" name="antiquewhite">
                     <input class="idProducto" type="hidden" name="id" value="nuez" id="idNuez">
                     <input class="precioProducto" type="hidden" name="precio" value="19990" id="precioNuez">
                     <label for="presentacionNuez"></label>
                     <select name="presentacion" class="presentacion" id="presentacionNuez">
                         <option value="" disabled selected>Pack</option>
-                        <option value="1">1 Kilo</option>
-                        <option value="2">2 Kilos</option>
-                        <option value="5">5 Kilos</option>
-                        <option value="15">15 Kilos</option>
+                        <option class="optPresent" value="1">1 Kilo</option>
+                        <option class="optPresent" value="2">2 Kilos</option>
+                        <option class="optPresent" value="5">5 Kilos</option>
+                        <option class="optPresent" value="15">15 Kilos</option>
                     </select>
                     <label for="cantidad"></label>
                     <input class="cantidadProducto" type="number" min="0" id="cantidadNuez" name="cantidad" placeholder="Cantidad">
@@ -213,6 +213,6 @@
             </div>
         </div>       
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="./js/offers.js"></script>
 </body>
 </html>
