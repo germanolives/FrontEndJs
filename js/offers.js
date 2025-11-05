@@ -74,29 +74,31 @@ function switchOscuro() {
    boton.classList.add('activo');
    localStorage.setItem('DarkOn', 'true');
 }
-// function contarCarrito() {
-//    const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
-//    return listaPedidos.length
-// }
-
-const offersSection = document.querySelector('.ofertas');
-const botonAgregarCarrito = document.querySelectorAll('.agregar-carrito');
-const articuloFrutoSecto = document.querySelectorAll('.cardOferta');
-const formArticulo = document.querySelectorAll('.compra');
-const numCarrito = document.querySelector('.counterCarrito sub');
-// numCarrito.innerText = contarCarrito();
-
-
 function contarCarrito() {
    const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
    const numCarrito = document.querySelector('.counterCarrito sub');
    numCarrito.innerText = listaPedidos.length;
 }
+function cargarPrecio(){
+   let precio = document.querySelectorAll('.compra .precioProducto');
+   let valorPrecio = document.querySelectorAll('.precio p');
+   for(i=0;i<precio.length;i++) {
+      valorPrecio[i].textContent = precio[i].value;
+}
+
+}
+function precioTextoANumero(precio) {
+   precio = parseFloat(precio.split('.').join('').replace(',', '.'));
+   return precio;
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
     contarCarrito();
+    cargarPrecio();
 });
-
+document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
+document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
 
 
 if (localStorage.getItem('searchOn') == 'true') {
@@ -107,28 +109,7 @@ if (localStorage.getItem('DarkOn') == 'true') {
 }
 
 
-document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
-document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
-
-
-function precioTextoANumero(precio) {
-   precio = parseFloat(precio.split('.').join('').replace(',', '.'));
-   return precio;
-}
-
-
-let precio = document.querySelectorAll('.compra .precioProducto');
-let valorPrecio = document.querySelectorAll('.precio p');
-for(i=0;i<precio.length;i++) {
-   valorPrecio[i].textContent = precio[i].value;
-}
-
-
-//--------------------------------------------------------------------------------------------------------------------//
-
-
-
-
+const offersSection = document.querySelector('.ofertas');
 
 
 offersSection.addEventListener('submit', (event)=>{
@@ -140,15 +121,15 @@ offersSection.addEventListener('submit', (event)=>{
          const presentaciones = formClick.querySelectorAll('.optPresent');
          let packsPresentaciones = [];
          presentaciones.forEach(pack => {
-            packsPresentaciones.push(pack.value);
+            packsPresentaciones.push(parseInt(pack.value));
          });
          const objetoProducto = {
             productoNombre: formClick.querySelector('.idProducto').value,
-            productoPrecio: formClick.querySelector('.precioProducto').value,
-            productoPresentacion: formClick.querySelector('.presentacion').value,
+            productoPrecio: precioTextoANumero(formClick.querySelector('.precioProducto').value),
+            productoPresentacion: parseInt(formClick.querySelector('.presentacion').value),
             packsPresentaciones: packsPresentaciones,
-            productoCantidad: formClick.querySelector('.cantidadProducto').value,
-            productoCompra: parseFloat(formClick.querySelector('.precioProducto').value) * parseInt(formClick.querySelector('.cantidadProducto').value),
+            productoCantidad: parseInt(formClick.querySelector('.cantidadProducto').value),
+            productoCompra: precioTextoANumero(formClick.querySelector('.precioProducto').value) * parseInt(formClick.querySelector('.cantidadProducto').value) * parseInt(formClick.querySelector('.presentacion').value),
             productoRutaImagen: formClick.parentNode.querySelector('img').getAttribute('src'),
             productoAnchoImagen: formClick.parentNode.querySelector('img').getAttribute('width'),
             productoAltoImagen: formClick.parentNode.querySelector('img').getAttribute('height'),
@@ -161,8 +142,6 @@ offersSection.addEventListener('submit', (event)=>{
          listaCompras.push(objetoProducto);
          localStorage.setItem('carrito', JSON.stringify(listaCompras));
          contarCarrito();
-        //  const numCarrito = document.querySelector('.counterCarrito sub');
-        //  numCarrito.innerText = contarCarrito();
       }
 
    }
@@ -180,23 +159,6 @@ offersSection.addEventListener('submit', (event)=>{
 
 
 
-function agregarProducto(event) {
-    let producto = {
-        id: event.target.getAttribute('data-id'),
-        nombre: event.target.getAttribute('data-nombre'),
-        precio: event.target.getAttribute('data-precio')
-    };
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito.push(producto);
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    cargarCarrito();
-}
-
-// Agregar producto al carrito
-let botonesAgregar = document.querySelectorAll('.agregar-carrito');
-for (let i = 0; i < botonesAgregar.length; i++) {
-    botonesAgregar[i].addEventListener('submit', agregarProducto);
-}
 
 
 
@@ -221,6 +183,27 @@ for (let i = 0; i < botonesAgregar.length; i++) {
 
 
 
+// function agregarProducto(event) {
+//     let producto = {
+//         id: event.target.getAttribute('data-id'),
+//         nombre: event.target.getAttribute('data-nombre'),
+//         precio: event.target.getAttribute('data-precio')
+//     };
+//     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+//     carrito.push(producto);
+//     localStorage.setItem('carrito', JSON.stringify(carrito));
+//     cargarCarrito();
+// }
+
+// // Agregar producto al carrito
+// let botonesAgregar = document.querySelectorAll('.agregar-carrito');
+// for (let i = 0; i < botonesAgregar.length; i++) {
+//     botonesAgregar[i].addEventListener('submit', agregarProducto);
+// }
+
+// const botonAgregarCarrito = document.querySelectorAll('.agregar-carrito');
+// const articuloFrutoSecto = document.querySelectorAll('.cardOferta');
+// const formArticulo = document.querySelectorAll('.compra');
 
 
 
@@ -242,6 +225,38 @@ for (let i = 0; i < botonesAgregar.length; i++) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+
+// const numCarrito = document.querySelector('.counterCarrito sub');
+// numCarrito.innerText = contarCarrito();
+
+// function contarCarrito() {
+//    const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
+//    return listaPedidos.length
+// }
+
+        //  const numCarrito = document.querySelector('.counterCarrito sub');
+        //  numCarrito.innerText = contarCarrito();
 
 // const elementoH1 = document.getElementById('titulo');
 // const elementoSearch = document.getElementById('search');

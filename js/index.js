@@ -74,27 +74,18 @@ function switchOscuro() {
    boton.classList.add('activo');
    localStorage.setItem('DarkOn', 'true');
 }
-
-
-// function contarCarrito() {
-//    const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
-//    return listaPedidos.length
-// }
-
-// const numCarrito = document.querySelector('.counterCarrito sub');
-// numCarrito.innerText = contarCarrito();
-
-
 function contarCarrito() {
    const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
    const numCarrito = document.querySelector('.counterCarrito sub');
    numCarrito.innerText = listaPedidos.length;
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
     contarCarrito();
 });
-
+document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
+document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
 
 
 if (localStorage.getItem('searchOn') == 'true') {
@@ -105,8 +96,52 @@ if (localStorage.getItem('DarkOn') == 'true') {
 }
 
 
-document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
-document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -114,13 +149,13 @@ document.getElementById('boton-claroOscuro').addEventListener('click', switchCla
 //--------------------------------------------------------------------------------------------------------------------//
 
 
+// function contarCarrito() {
+//    const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
+//    return listaPedidos.length
+// }
 
-
-
-
-
-
-
+// const numCarrito = document.querySelector('.counterCarrito sub');
+// numCarrito.innerText = contarCarrito();
 
 
 

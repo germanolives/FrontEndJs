@@ -74,6 +74,94 @@ function switchOscuro() {
    boton.classList.add('activo');
    localStorage.setItem('DarkOn', 'true');
 }
+function contarCarrito() {
+   const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
+   const numCarrito = document.querySelector('.counterCarrito sub');
+   numCarrito.innerText = listaPedidos.length;
+}
+function cargarCarrito(){
+   const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
+   const mainCart = document.querySelector('main');
+   mainCart.innerHTML = '';
+   let sumCompra = 0;
+   if(listaPedidos.length){
+      let pedidos = document.createElement('section');
+      let h2Pedidos = document.createElement('h2');
+      let pedido = document.createElement('div');
+      pedidos.classList.add('pedidos');
+      h2Pedidos.innerText = 'MI CARRITO';
+      pedido.classList.add('div');
+      mainCart.appendChild(pedidos);
+      pedidos.appendChild(h2Pedidos);
+      pedidos.appendChild(pedido);
+      for(let i=0; i<listaPedidos.length; i++){
+         let itemPedido = document.createElement('article');
+         itemPedido.classList.add('articuloCarrito');
+         itemPedido.setAttribute('id', listaPedidos[i].fechaPedido);
+         itemPedido.style.backgroundColor = listaPedidos[i].cardColor;
+         pedido.appendChild(itemPedido);
+         let h2Producto = document.createElement('h3');
+         h2Producto.innerText = listaPedidos[i].productoNombre.toUpperCase();
+         itemPedido.appendChild(h2Producto);
+         let imagenProducto = document.createElement('img');
+         imagenProducto.setAttribute('src', listaPedidos[i].productoRutaImagen);
+         imagenProducto.setAttribute('widht', listaPedidos[i].productoAnchoImagen/2);
+         imagenProducto.setAttribute('height', listaPedidos[i].productoAltoImagen/2);
+         itemPedido.appendChild(imagenProducto);
+         let eliminarItem = document.createElement('span');
+         eliminarItem.classList.add('botonEliminarItemPedido');
+         eliminarItem.innerHTML = '<i class="fa-solid fa-trash"></i>';
+         eliminarItem.style.backgroundColor = listaPedidos[i].cardColor;
+         itemPedido.appendChild(eliminarItem);
+         let valorCompra = document.createElement('div');
+         valorCompra.classList.add('valorCompra');
+         itemPedido.appendChild(valorCompra);
+         let pack = document.createElement('p');
+         pack.innerText = `Pack de ${listaPedidos[i].productoPresentacion} kg x ${listaPedidos[i].productoCantidad}`;
+         let precioCompra = document.createElement('h4');
+         sumCompra = sumCompra + listaPedidos[i].productoCompra;
+         precioCompra.innerText = `$${listaPedidos[i].productoCompra.toLocaleString('es-ES')}`;
+         valorCompra.appendChild(pack);
+         valorCompra.appendChild(precioCompra);
+      }
+      h2Pedidos.innerHTML = `MI CARRITO: $${sumCompra.toLocaleString('es-ES')}`;
+      const eliminarProductoPedido = document.querySelector('.pedidos .div');
+      eliminarProductoPedido.addEventListener('click', (event)=>{
+         const itemClick = event.target;
+         if(itemClick.tagName == 'I'){
+            const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
+            for(let i=0; i<listaPedidos.length; i++){
+               if(listaPedidos[i].fechaPedido == itemClick.parentNode.parentNode.getAttribute('id')){
+                  listaPedidos.splice(i, 1);
+               }
+         }
+         localStorage.setItem('carrito', JSON.stringify(listaPedidos));
+         cargarCarrito();
+         contarCarrito();
+         }
+      });
+   }
+   else{
+   let pedidos = document.createElement('section');
+   let h2Pedidos = document.createElement('h2');
+   let pedido = document.createElement('div');
+   pedidos.classList.add('pedidos');
+   pedidos.innerHTML = '<p>No hay compras en tu carrito</p>';
+   h2Pedidos.innerText = 'MI CARRITO: $0,00';
+   pedido.classList.add('div');
+   mainCart.appendChild(pedidos);
+   pedidos.appendChild(h2Pedidos);
+   pedidos.appendChild(pedido);
+   }
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+   cargarCarrito();
+   contarCarrito();
+});
+document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
+document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
 
 
 if (localStorage.getItem('searchOn') == 'true') {
@@ -84,23 +172,51 @@ if (localStorage.getItem('DarkOn') == 'true') {
 }
 
 
-function contarCarrito() {
-   const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
-   const numCarrito = document.querySelector('.counterCarrito sub');
-   numCarrito.innerText = listaPedidos.length;
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-   cargarCarrito();
-   contarCarrito();
-});
-
-document.getElementById('boton-tituloBusqueda').addEventListener('click', switchTituloBusqueda);
-document.getElementById('boton-claroOscuro').addEventListener('click', switchClaroOscuro);
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------//
 
 
 // function contarCarrito() {
@@ -112,43 +228,71 @@ document.getElementById('boton-claroOscuro').addEventListener('click', switchCla
 // const numCarrito = document.querySelector('.counterCarrito sub');
 // numCarrito.innerText = contarCarrito();
 
-function cargarCarrito() {
-    const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
-    if(listaPedidos.length){
-        const mainCart = document.querySelector('main');
-        let pedidos = document.createElement('section');
-        let h2Pedidos = document.createElement('h2');
-        let pedido = document.createElement('div');
-        pedidos.classList.add('pedidos');
-        h2Pedidos.classList.add('h2');
-        h2Pedidos.innerText = 'MI CARRITO';
-        
-        pedido.classList.add('div');
-        mainCart.appendChild(pedidos);
-        pedidos.appendChild(h2Pedidos);
-        pedidos.appendChild(pedido);
-        for(let i=0; i<listaPedidos.length; i++){
-            // console.log(listaPedidos[i]);
-            let itemPedido = document.createElement('article');
-            itemPedido.classList.add('articuloCarrito');
-            itemPedido.style.backgroundColor = listaPedidos[i].cardColor;
-            let h2Producto = document.createElement('h3');
-            h2Producto.innerText = listaPedidos[i].productoNombre.toUpperCase();
-            let imagenProducto = document.createElement('img');
-            imagenProducto.setAttribute('src', listaPedidos[i].productoRutaImagen);
-            imagenProducto.setAttribute('widht', listaPedidos[i].productoAnchoImagen/2);
-            imagenProducto.setAttribute('height', listaPedidos[i].productoAltoImagen/2);
+// function vaciarCarrito(){
+//    let mainCart = document.querySelector('main');
+//    mainCart.innerHTML = '';
+// }
 
-            itemPedido.appendChild(h2Producto);
-            itemPedido.appendChild(imagenProducto);
-            pedido.appendChild(itemPedido);
-            
-        }
-    }
-
-        
-    };
-
+// const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
+// const mainCart = document.querySelector('main');
+// mainCart.innerHTML = '';
+// let sumCompra = 0;
+// if(listaPedidos.length){
+//    let pedidos = document.createElement('section');
+//    let h2Pedidos = document.createElement('h2');
+//    let pedido = document.createElement('div');
+//    pedidos.classList.add('pedidos');
+//    h2Pedidos.classList.add('h2');
+//    h2Pedidos.innerText = 'MI CARRITO';
+//    pedido.classList.add('div');
+//    mainCart.appendChild(pedidos);
+//    pedidos.appendChild(h2Pedidos);
+//    pedidos.appendChild(pedido);
+//    for(let i=0; i<listaPedidos.length; i++){
+//       let itemPedido = document.createElement('article');
+//       itemPedido.classList.add('articuloCarrito');
+//       itemPedido.setAttribute('id', listaPedidos[i].fechaPedido);
+//       itemPedido.style.backgroundColor = listaPedidos[i].cardColor;
+//       pedido.appendChild(itemPedido);
+//       let h2Producto = document.createElement('h3');
+//       h2Producto.innerText = listaPedidos[i].productoNombre.toUpperCase();
+//       itemPedido.appendChild(h2Producto);
+//       let imagenProducto = document.createElement('img');
+//       imagenProducto.setAttribute('src', listaPedidos[i].productoRutaImagen);
+//       imagenProducto.setAttribute('widht', listaPedidos[i].productoAnchoImagen/2);
+//       imagenProducto.setAttribute('height', listaPedidos[i].productoAltoImagen/2);
+//       itemPedido.appendChild(imagenProducto);
+//       let eliminarItem = document.createElement('span');
+//       eliminarItem.classList.add('botonEliminarItemPedido');
+//       eliminarItem.innerHTML = '<i class="fa-solid fa-trash"></i>';
+//       eliminarItem.style.backgroundColor = listaPedidos[i].cardColor;
+//       itemPedido.appendChild(eliminarItem);
+//       let valorCompra = document.createElement('div');
+//       valorCompra.classList.add('valorCompra');
+//       itemPedido.appendChild(valorCompra);
+//       let pack = document.createElement('p');
+//       pack.innerText = `Pack de ${listaPedidos[i].productoPresentacion} kg x ${listaPedidos[i].productoCantidad}`;
+//       let precioCompra = document.createElement('h4');
+//       sumCompra = sumCompra + listaPedidos[i].productoCompra;
+//       precioCompra.innerText = `$${listaPedidos[i].productoCompra.toLocaleString('es-ES')}`;
+//       valorCompra.appendChild(pack);
+//       valorCompra.appendChild(precioCompra);
+//    }
+//    h2Pedidos.innerText = `MI CARRITO: $${sumCompra.toLocaleString('es-ES')}`;
+//    }
+// else{
+//    let pedidos = document.createElement('section');
+//    let h2Pedidos = document.createElement('h2');
+//    let pedido = document.createElement('div');
+//    pedidos.classList.add('pedidos');
+//    pedidos.innerHTML = '<p>No hay compras en tu carrito</p>';
+//    h2Pedidos.classList.add('h2');
+//    h2Pedidos.innerText = 'MI CARRITO: $0,00';
+//    pedido.classList.add('div');
+//    mainCart.appendChild(pedidos);
+//    pedidos.appendChild(h2Pedidos);
+//    pedidos.appendChild(pedido);
+// }
 
 
 
