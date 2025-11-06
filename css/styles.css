@@ -1149,10 +1149,10 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: none;
+  /* border: none; */
 }
 
-.pedidos h2 {
+.solapaPedidos {
   width: 210px;
   text-align: center;
   position: absolute;
@@ -1162,7 +1162,6 @@ body {
   border-radius: 10px 10px 0px 0px;
   border: 1px solid hsl(0, 0%, 50%);
 }
-
 
 .articuloCarrito{
   border: 1px solid grey;
@@ -1643,13 +1642,13 @@ h1 {
 
 .search input {
   padding-top: 0.1rem;
-  width: 245px;
+  width: 255px;
 }
 
 .search input::placeholder {
   font-size: 1rem;
   color: brown;
-  background-size: contain;
+  background-size: cover;
   background-image: url(../img/TTPNeutro.jpg);
   background-position: 12px;
 }

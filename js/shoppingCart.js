@@ -86,13 +86,20 @@ function cargarCarrito(){
    let sumCompra = 0;
    if(listaPedidos.length){
       let pedidos = document.createElement('section');
+      let solapaPedidos = document.createElement('div');
+      solapaPedidos.classList.add('solapaPedidos');
       let h2Pedidos = document.createElement('h2');
+      let trashCarrito = document.createElement('span');
+      trashCarrito.classList.add('botonEliminarItemPedido');
       let pedido = document.createElement('div');
       pedidos.classList.add('pedidos');
       h2Pedidos.innerText = 'MI CARRITO';
+      trashCarrito.innerHTML = '<i class="fa-solid fa-trash"></i>';
       pedido.classList.add('div');
       mainCart.appendChild(pedidos);
-      pedidos.appendChild(h2Pedidos);
+      pedidos.appendChild(solapaPedidos);
+      solapaPedidos.appendChild(h2Pedidos);
+      solapaPedidos.appendChild(trashCarrito);
       pedidos.appendChild(pedido);
       for(let i=0; i<listaPedidos.length; i++){
          let itemPedido = document.createElement('article');
@@ -140,9 +147,20 @@ function cargarCarrito(){
          contarCarrito();
          }
       });
+      const eliminarPedido = document.querySelector('.solapaPedidos');
+      eliminarPedido.addEventListener('click', (event)=>{
+         const itemClick = event.target;
+         if(itemClick.tagName == 'I'){
+            localStorage.removeItem('carrito');
+            cargarCarrito();
+            contarCarrito();
+         }
+      });
    }
    else{
    let pedidos = document.createElement('section');
+   let solapaPedidos = document.createElement('div');
+   solapaPedidos.classList.add('solapaPedidos');
    let h2Pedidos = document.createElement('h2');
    let pedido = document.createElement('div');
    pedidos.classList.add('pedidos');
@@ -150,7 +168,8 @@ function cargarCarrito(){
    h2Pedidos.innerText = 'MI CARRITO: $0,00';
    pedido.classList.add('div');
    mainCart.appendChild(pedidos);
-   pedidos.appendChild(h2Pedidos);
+   pedidos.appendChild(solapaPedidos);
+   solapaPedidos.appendChild(h2Pedidos);
    pedidos.appendChild(pedido);
    }
 }
