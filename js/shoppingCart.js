@@ -102,18 +102,20 @@ function cargarCarrito(){
       solapaPedidos.appendChild(trashCarrito);
       pedidos.appendChild(pedido);
       for(let i=0; i<listaPedidos.length; i++){
+         const fechaPedido = new Date().toISOString();
          let itemPedido = document.createElement('article');
          itemPedido.classList.add('articuloCarrito');
-         itemPedido.setAttribute('id', listaPedidos[i].fechaPedido);
          itemPedido.style.backgroundColor = listaPedidos[i].cardColor;
          pedido.appendChild(itemPedido);
          let h2Producto = document.createElement('h3');
+         h2Producto.setAttribute('id', listaPedidos[i].fechaPedido);
          h2Producto.innerText = listaPedidos[i].productoNombre.toUpperCase();
          itemPedido.appendChild(h2Producto);
          let imagenProducto = document.createElement('img');
          imagenProducto.setAttribute('src', listaPedidos[i].productoRutaImagen);
          imagenProducto.setAttribute('widht', listaPedidos[i].productoAnchoImagen/2);
          imagenProducto.setAttribute('height', listaPedidos[i].productoAltoImagen/2);
+         imagenProducto.style.borderRadius = '5px';
          itemPedido.appendChild(imagenProducto);
          let eliminarItem = document.createElement('span');
          eliminarItem.classList.add('botonEliminarItemPedido');
@@ -123,13 +125,40 @@ function cargarCarrito(){
          let valorCompra = document.createElement('div');
          valorCompra.classList.add('valorCompra');
          itemPedido.appendChild(valorCompra);
+         let contenedorCant = document.createElement('div');
+         contenedorCant.classList.add('contenedorCant');
+         let labelCantProd = document.createElement('label');
+         labelCantProd.setAttribute('for', fechaPedido);
+         labelCantProd.innerText = 'Cantidad';
+         labelCantProd.style.fontSize = '12px';
+         let cantProd = document.createElement('input');
+         cantProd.classList.add('cantProd');
+         cantProd.setAttribute('type', 'number');
+         cantProd.setAttribute('min', '1');
+         cantProd.setAttribute('max', '999');
+         cantProd.setAttribute('name', 'cantidadProd');
+         cantProd.setAttribute('id', fechaPedido);
+         cantProd.style.backgroundColor = listaPedidos[i].cardColor;
+         cantProd.setAttribute('value', listaPedidos[i].productoCantidad);
+         let botonCant = document.createElement('button');
+         botonCant.setAttribute('type', 'button');
+         botonCant.innerHTML = '<i class="fa-solid fa-cart-shopping redB"></i>';
          let pack = document.createElement('p');
-         pack.innerText = `Pack de ${listaPedidos[i].productoPresentacion} kg x ${listaPedidos[i].productoCantidad}`;
-         let precioCompra = document.createElement('h4');
+         pack.innerText = `Pack ${listaPedidos[i].productoPresentacion} Kg`;
+         pack.style.fontWeight = 'bold';
+         let precioCompra = document.createElement('h3');
          sumCompra = sumCompra + listaPedidos[i].productoCompra;
          precioCompra.innerText = `$${listaPedidos[i].productoCompra.toLocaleString('es-ES')}`;
+         let precioKilo = document.createElement('p');
+         precioKilo.innerText = `($${listaPedidos[i].productoPrecio.toLocaleString('es-ES')} x Kg)`;
+         precioKilo.style.fontSize = '9px';
          valorCompra.appendChild(pack);
+         valorCompra.appendChild(labelCantProd);
+         valorCompra.appendChild(contenedorCant);
+         contenedorCant.appendChild(cantProd);
+         contenedorCant.appendChild(botonCant);
          valorCompra.appendChild(precioCompra);
+         valorCompra.appendChild(precioKilo);
       }
       h2Pedidos.innerHTML = `MI CARRITO: $${sumCompra.toLocaleString('es-ES')}`;
       const eliminarProductoPedido = document.querySelector('.pedidos .div');
@@ -138,7 +167,7 @@ function cargarCarrito(){
          if(itemClick.tagName == 'I'){
             const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
             for(let i=0; i<listaPedidos.length; i++){
-               if(listaPedidos[i].fechaPedido == itemClick.parentNode.parentNode.getAttribute('id')){
+               if(listaPedidos[i].fechaPedido == itemClick.parentNode.parentNode.parentNode.querySelector('h3').id){
                   listaPedidos.splice(i, 1);
                }
          }
@@ -156,6 +185,30 @@ function cargarCarrito(){
             contarCarrito();
          }
       });
+      const modificarCantidadPedido = document.querySelector('.pedidos .div');
+      modificarCantidadPedido.addEventListener('click', (event)=>{
+         const formClick = event.target;
+         if(formClick.classList.contains('redB')){
+            const cantItem = parseInt(formClick.parentNode.parentNode.parentNode.querySelector('input').value);
+            const idItem = formClick.parentNode.parentNode.parentNode.parentNode.querySelector('h3').id;
+            console.log(idItem, cantItem);
+            const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
+            for(let i=0; i<listaPedidos.length; i++){
+               if(listaPedidos[i].fechaPedido == idItem){
+                  listaPedidos[i].productoCantidad = cantItem;
+                  listaPedidos[i].productoCompra = listaPedidos[i].productoPresentacion * listaPedidos[i].productoPrecio * cantItem;
+               }
+            }
+            localStorage.setItem('carrito', JSON.stringify(listaPedidos));
+            cargarCarrito();
+            contarCarrito();
+         }
+
+
+
+
+      });
+
    }
    else{
    let pedidos = document.createElement('section');

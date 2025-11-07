@@ -1173,7 +1173,7 @@ body {
   align-items: center;
   margin: 15px;
   width: 160px;
-  height: 160px;
+  height: 200px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, cursor 0.3s ease; 
   position: relative;
@@ -1192,8 +1192,43 @@ body {
   cursor: pointer;
 }
 
+.valorCompra{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cantProd{
+  border: 1px solid grey;
+  border-radius: 2px;
+  font-size: 15px;
+  padding: 2px;
+  width: 50px;
+}
+
+.cantProd::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+.contenedorCant button{
+  border: none;
+}
+
 .cardOfertaDark {
 box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.redB{
+  padding: 4px;
+  border-radius: 2px;
+  border: 1px solid grey;
+  color: red;
+  width: 25px;
+}
+
+.redB:hover{
+  background-color: hsl(0, 0%, 88%);
 }
 
 .cardOferta img {
