@@ -203,8 +203,8 @@ function cargarCarrito(){
             contarCarrito();
          }
       });
-      const modificarCantidadPedido = document.querySelector('.pedidos .div');
-      modificarCantidadPedido.addEventListener('click', (event)=>{
+      const modificarPedido = document.querySelector('.pedidos .div');
+      modificarPedido.addEventListener('click', (event)=>{
          const formClick = event.target;
          if(formClick.classList.contains('redB')){
             const packItem = formClick.parentNode.parentNode.parentNode.parentNode.querySelector('select').value;
