@@ -1144,7 +1144,7 @@ body {
   position: relative;
 }
 
-.pedidos div {
+.pedidos .div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1856,7 +1856,7 @@ h1 {
 }
 
 .descripcion {
-  font-size: 0.6rem;
+  font-size: 0.58rem;
 }
 
 
@@ -1947,7 +1947,17 @@ h1 {
 }
 audio {width: 190px;}
 
+.solapaPedidos {
+  width: 150px;
+  top: -49.5px;
+  left: -0.5px;
+  font-size: 0.75rem;
+}
 
+.pedidos {
+  margin: 6em 1em 6em;
+}
+.
 }
 
 @media (max-width: 379px) {
