@@ -1173,7 +1173,7 @@ body {
   align-items: center;
   margin: 15px;
   width: 160px;
-  height: 200px;
+  height: 220px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, cursor 0.3s ease; 
   position: relative;
@@ -1201,7 +1201,7 @@ body {
 
 .cantProd{
   border: 1px solid grey;
-  border-radius: 2px;
+  border-radius: 5px 0px 0px 5px;
   font-size: 15px;
   padding: 2px;
   width: 50px;
@@ -1213,6 +1213,29 @@ body {
 
 .contenedorCant button{
   border: none;
+}
+
+.selPack{
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.contenedorPack{
+  margin: 4px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contenedorPack span{
+  margin: 0px 4px 4px 0px;
+}
+
+
+.contenedorCant button i{
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid grey;
+  border-left: none;
 }
 
 .cardOfertaDark {

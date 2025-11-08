@@ -102,6 +102,7 @@ function cargarCarrito(){
       solapaPedidos.appendChild(trashCarrito);
       pedidos.appendChild(pedido);
       for(let i=0; i<listaPedidos.length; i++){
+         console.log(listaPedidos[i].packsPresentaciones.length);
          const fechaPedido = new Date().toISOString();
          let itemPedido = document.createElement('article');
          itemPedido.classList.add('articuloCarrito');
@@ -143,16 +144,33 @@ function cargarCarrito(){
          let botonCant = document.createElement('button');
          botonCant.setAttribute('type', 'button');
          botonCant.innerHTML = '<i class="fa-solid fa-cart-shopping redB"></i>';
-         let pack = document.createElement('p');
-         pack.innerText = `Pack ${listaPedidos[i].productoPresentacion} Kg`;
-         pack.style.fontWeight = 'bold';
+         let contenedorPack = document.createElement('div');
+         contenedorPack.classList.add('contenedorPack');
+         let namePack = document.createElement('span');
+         let selPack = document.createElement('select');
+         selPack.classList.add('selPack');
+         selPack.setAttribute('name', 'presentacion');
+         selPack.style.backgroundColor = listaPedidos[i].cardColor;
+         namePack.innerText = 'Pack';
          let precioCompra = document.createElement('h3');
          sumCompra = sumCompra + listaPedidos[i].productoCompra;
          precioCompra.innerText = `$${listaPedidos[i].productoCompra.toLocaleString('es-ES')}`;
          let precioKilo = document.createElement('p');
          precioKilo.innerText = `($${listaPedidos[i].productoPrecio.toLocaleString('es-ES')} x Kg)`;
          precioKilo.style.fontSize = '9px';
-         valorCompra.appendChild(pack);
+         valorCompra.appendChild(contenedorPack);
+         contenedorPack.appendChild(namePack);
+         contenedorPack.appendChild(selPack);
+         for(let j=0; j<listaPedidos[i].packsPresentaciones.length; j++){
+            let optPack = document.createElement('option');
+            optPack.classList.add('optPack');
+            optPack.setAttribute('value', listaPedidos[i].packsPresentaciones[j]);
+            optPack.innerText = `${listaPedidos[i].packsPresentaciones[j]} Kg`;
+            if(listaPedidos[i].productoPresentacion == listaPedidos[i].packsPresentaciones[j]){
+               optPack.setAttribute('selected', '');
+            }
+            selPack.appendChild(optPack);
+         }
          valorCompra.appendChild(labelCantProd);
          valorCompra.appendChild(contenedorCant);
          contenedorCant.appendChild(cantProd);
@@ -189,6 +207,8 @@ function cargarCarrito(){
       modificarCantidadPedido.addEventListener('click', (event)=>{
          const formClick = event.target;
          if(formClick.classList.contains('redB')){
+            const packItem = formClick.parentNode.parentNode.parentNode.parentNode.querySelector('select').value;
+            console.log(packItem);
             const cantItem = parseInt(formClick.parentNode.parentNode.parentNode.querySelector('input').value);
             const idItem = formClick.parentNode.parentNode.parentNode.parentNode.querySelector('h3').id;
             console.log(idItem, cantItem);
@@ -196,7 +216,8 @@ function cargarCarrito(){
             for(let i=0; i<listaPedidos.length; i++){
                if(listaPedidos[i].fechaPedido == idItem){
                   listaPedidos[i].productoCantidad = cantItem;
-                  listaPedidos[i].productoCompra = listaPedidos[i].productoPresentacion * listaPedidos[i].productoPrecio * cantItem;
+                  listaPedidos[i].productoPresentacion = packItem;
+                  listaPedidos[i].productoCompra = packItem * listaPedidos[i].productoPrecio * cantItem;
                }
             }
             localStorage.setItem('carrito', JSON.stringify(listaPedidos));
