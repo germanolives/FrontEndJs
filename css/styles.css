@@ -142,9 +142,9 @@ header {
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
 }
 
-h1 {
+/* h1 {
   display: flex;
-}
+} */
 
 .search {
   display: none;
@@ -876,6 +876,7 @@ h2 a {
   display: flex;
   flex-direction: column;
   text-align: center;
+  border-radius: 5px;
 }
 
 .usuarios input {
@@ -1012,11 +1013,6 @@ h2 a {
   font-size: large;
 }
 
-.inputDos {
-  display: flex;
-  justify-content: space-between;
-  width: 296px;
-}
 
 .register button {
   padding: 0.5em 1.5em;
@@ -1029,13 +1025,6 @@ h2 a {
 .register button:hover {
  background-color: hsl(0, 0%, 80%);
 }
-
-.register select {
-  border-radius: 5px;
-  height: 29px;
-  border: 1px solid grey;
-  background-color: white;
-} 
 
 
 /*NOSOTROS.HTML*/
@@ -1380,10 +1369,6 @@ box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 .detalleCounterCarrito {
   width: 25%;
 }
-/* header {
-    grid-template-columns: 70px 1fr;
-    grid-template-rows: 45px 25px;
-} */
 
 .categorias h2 {
   top: -33px;
@@ -1492,6 +1477,8 @@ box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
   width: 220px;
 }
 
+
+
 }
 
 @media (max-width: 800px) {
@@ -1583,28 +1570,6 @@ box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
   width: 95%;
   
 }
-
-/* #presentacionNuez {
-  width: 30%;
-}
-#cantidadNuez {
-  width: 30%;
-}
-
-#presentacionAvellana {
-  width: 30%;
-}
-#cantidadAvellana {
-  width: 30%;
-}
-
-#presentacionAlmendra {
-  width: 30%;
-}
-#cantidadAlmendra {
-  width: 30%;
-} */
-
 }
 
 @media (max-width: 700px) {
@@ -1670,8 +1635,6 @@ header {
   height: 250px;
   border: 1px solid grey;
 }
-
-
 }
 
 @media (max-width: 598px) {
@@ -1926,14 +1889,6 @@ h1 {
 
 .register {
   width: 230px;
-}
-
-.inputDos {
-  width: 200px;
-}
-
-.inputDos .input {
-  width: 100px;
 }
 
 .cardCategoria {
