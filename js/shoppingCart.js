@@ -25,18 +25,36 @@ function cargarCarrito(){
          const fechaPedido = new Date().toISOString();
          let itemPedido = document.createElement('article');
          itemPedido.classList.add('articuloCarrito');
+         itemPedido.style.color = 'brown';
          itemPedido.style.backgroundColor = listaPedidos[i].cardColor;
          pedido.appendChild(itemPedido);
-         let h2Producto = document.createElement('h3');
-         h2Producto.setAttribute('id', listaPedidos[i].fechaPedido);
-         h2Producto.innerText = listaPedidos[i].productoNombre.toUpperCase();
-         itemPedido.appendChild(h2Producto);
+         let h3Producto = document.createElement('h3');
+         h3Producto.classList.add('h3Producto');
+         h3Producto.setAttribute('id', listaPedidos[i].fechaPedido);
+         h3Producto.innerText = listaPedidos[i].productoNombre.toUpperCase();
+         itemPedido.appendChild(h3Producto);
          let imagenProducto = document.createElement('img');
          imagenProducto.setAttribute('src', listaPedidos[i].productoRutaImagen);
          imagenProducto.setAttribute('widht', listaPedidos[i].productoAnchoImagen/2);
          imagenProducto.setAttribute('height', listaPedidos[i].productoAltoImagen/2);
+         imagenProducto.setAttribute('alt', listaPedidos[i].productoNombre);
          imagenProducto.style.borderRadius = '5px';
+         let contenedorDescripcionItem = document.createElement('div');
+         contenedorDescripcionItem.classList.add('contenedorDescripcionItem');
+         if(!listaPedidos[i].mostrarDescripcion){
+            imagenProducto.style.display = 'block';
+            contenedorDescripcionItem.style.display = 'none';
+         }
+         else{
+            imagenProducto.style.display = 'none';
+            contenedorDescripcionItem.style.display = 'flex';
+         }
          itemPedido.appendChild(imagenProducto);
+         itemPedido.appendChild(contenedorDescripcionItem);
+         let descripcionItem = document.createElement('p');
+         descripcionItem.classList.add('descripcionItem');
+         descripcionItem.innerText = listaPedidos[i].productoDescripcion;
+         contenedorDescripcionItem.appendChild(descripcionItem);
          let eliminarItem = document.createElement('span');
          eliminarItem.classList.add('botonEliminarItemPedido');
          eliminarItem.innerHTML = '<i class="fa-solid fa-trash"></i>';
@@ -71,9 +89,10 @@ function cargarCarrito(){
          selPack.setAttribute('name', 'presentacion');
          selPack.style.backgroundColor = listaPedidos[i].cardColor;
          namePack.innerText = 'Pack';
-         let precioCompra = document.createElement('h3');
+         let precioCompra = document.createElement('h2');
+         precioCompra.style.color = 'black';
          sumCompra = sumCompra + listaPedidos[i].productoCompra;
-         precioCompra.innerText = `$${listaPedidos[i].productoCompra.toLocaleString('es-ES')}`;
+         precioCompra.innerHTML = `<small>$</small>${listaPedidos[i].productoCompra.toLocaleString('es-ES')}`;
          let precioKilo = document.createElement('p');
          precioKilo.innerText = `($${listaPedidos[i].productoPrecio.toLocaleString('es-ES')} x Kg)`;
          precioKilo.style.fontSize = '9px';
@@ -97,14 +116,15 @@ function cargarCarrito(){
          valorCompra.appendChild(precioCompra);
          valorCompra.appendChild(precioKilo);
       }
-      h2Pedidos.innerHTML = `MI CARRITO: $${sumCompra.toLocaleString('es-ES')}`;
+      h2Pedidos.innerHTML = `MI CARRITO: <small>$</small>${sumCompra.toLocaleString('es-ES')}`;
+      h2Pedidos.style.color = 'black';
       const eliminarProductoPedido = document.querySelector('.pedidos .div');
       eliminarProductoPedido.addEventListener('click', (event)=>{
          const itemClick = event.target;
          if(itemClick.tagName == 'I'){
             const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
             for(let i=0; i<listaPedidos.length; i++){
-               if(listaPedidos[i].fechaPedido == itemClick.parentNode.parentNode.parentNode.querySelector('h3').id){
+               if(listaPedidos[i].fechaPedido == itemClick.parentNode.parentNode.parentNode.querySelector('h3')?.id){
                   listaPedidos.splice(i, 1);
                }
          }
@@ -113,6 +133,31 @@ function cargarCarrito(){
          contarCarrito();
          }
       });
+      const mostrarDescripcion = document.querySelector('.pedidos .div');
+      mostrarDescripcion.addEventListener('click', (event)=>{
+         const mostrarClick = event.target;
+         if(mostrarClick.tagName == 'H3'){
+            const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
+            for(let i=0; i<listaPedidos.length; i++){
+               if(listaPedidos[i].productoNombre == mostrarClick.parentNode.querySelector('img').getAttribute('alt')){
+                  console.log(listaPedidos[i].productoNombre, listaPedidos[i].mostrarDescripcion);
+                  if(!listaPedidos[i].mostrarDescripcion){
+                     mostrarClick.parentNode.querySelector('img').style.display = 'none';
+                     mostrarClick.parentNode.querySelector('.contenedorDescripcionItem').style.display = 'flex';
+                     listaPedidos[i].mostrarDescripcion = true;
+                     localStorage.setItem('carrito', JSON.stringify(listaPedidos));
+                  }
+                  else{
+                     mostrarClick.parentNode.querySelector('img').style.display = 'block';
+                     mostrarClick.parentNode.querySelector('.contenedorDescripcionItem').style.display = 'none';
+                     listaPedidos[i].mostrarDescripcion = false;
+                     localStorage.setItem('carrito', JSON.stringify(listaPedidos));
+                  }
+               }
+            }
+      }
+      })
+
       const eliminarPedido = document.querySelector('.solapaPedidos');
       eliminarPedido.addEventListener('click', (event)=>{
          const itemClick = event.target;
@@ -125,10 +170,10 @@ function cargarCarrito(){
       const modificarPedido = document.querySelector('.pedidos .div');
       modificarPedido.addEventListener('click', (event)=>{
          const formClick = event.target;
-         if(formClick.classList.contains('redB')){
+         const cantItem = parseInt(formClick.parentNode.parentNode.parentNode.querySelector('input').value);
+         if(formClick.classList.contains('redB') && cantItem>=1 && cantItem<=999){
             const packItem = formClick.parentNode.parentNode.parentNode.parentNode.querySelector('select').value;
             console.log(packItem);
-            const cantItem = parseInt(formClick.parentNode.parentNode.parentNode.querySelector('input').value);
             const idItem = formClick.parentNode.parentNode.parentNode.parentNode.querySelector('h3').id;
             console.log(idItem, cantItem);
             const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -158,7 +203,8 @@ function cargarCarrito(){
    let pedido = document.createElement('div');
    pedidos.classList.add('pedidos');
    pedidos.innerHTML = '<p>No hay compras en tu carrito</p>';
-   h2Pedidos.innerText = 'MI CARRITO: $0,00';
+   h2Pedidos.innerHTML = 'MI CARRITO: <small>$</small>0,00';
+   h2Pedidos.style.color = 'brown';
    pedido.classList.add('div');
    mainCart.appendChild(pedidos);
    pedidos.appendChild(solapaPedidos);
@@ -253,9 +299,9 @@ document.addEventListener('DOMContentLoaded', function () {
 //       itemPedido.setAttribute('id', listaPedidos[i].fechaPedido);
 //       itemPedido.style.backgroundColor = listaPedidos[i].cardColor;
 //       pedido.appendChild(itemPedido);
-//       let h2Producto = document.createElement('h3');
-//       h2Producto.innerText = listaPedidos[i].productoNombre.toUpperCase();
-//       itemPedido.appendChild(h2Producto);
+//       let h3Producto = document.createElement('h3');
+//       h3Producto.innerText = listaPedidos[i].productoNombre.toUpperCase();
+//       itemPedido.appendChild(h3Producto);
 //       let imagenProducto = document.createElement('img');
 //       imagenProducto.setAttribute('src', listaPedidos[i].productoRutaImagen);
 //       imagenProducto.setAttribute('widht', listaPedidos[i].productoAnchoImagen/2);

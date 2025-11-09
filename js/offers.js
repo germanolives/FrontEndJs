@@ -24,7 +24,7 @@ offersSection.addEventListener('submit', (event)=>{
    event.preventDefault();
    const formClick = event.target;
    if(formClick.classList.contains('compra')){
-      if(formClick.querySelector('.cantidadProducto').value>0 && formClick.querySelector('.presentacion').value>0){
+      if(formClick.querySelector('.cantidadProducto').value>0 && formClick.querySelector('.cantidadProducto').value<1000 && formClick.querySelector('.presentacion').value>0){
          const fechaPedido = new Date().toISOString();
          const presentaciones = formClick.querySelectorAll('.optPresent');
          let packsPresentaciones = [];
@@ -44,6 +44,7 @@ offersSection.addEventListener('submit', (event)=>{
             cardColor: formClick.parentNode.querySelector('form').name,
             productoDescripcion: formClick.parentNode.querySelector('.descripcion').innerText,
             fechaPedido: fechaPedido,
+            mostrarDescripcion: false,
          }
          console.log(objetoProducto);
          const listaCompras = (JSON.parse(localStorage.getItem('carrito')) || []);

@@ -1117,6 +1117,7 @@ body {
 
 
 .cardOferta {
+  color: brown;
   border: 1px solid grey;
   border-radius: 10px;
   background-color: aquamarine;
@@ -1172,11 +1173,32 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 15px;
-  width: 160px;
+  width: 200px;
   height: 220px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, cursor 0.3s ease; 
   position: relative;
+}
+
+.h3Producto:hover{
+  cursor: pointer;
+}
+
+.contenedorDescripcionItem{
+  display: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 180px;
+  height: 70px;
+  overflow: auto;
+}
+
+.descripcionItem{
+  font-size: 10px;
+  text-align: center;
+  padding: 2px;
+
+  
 }
 
 .botonEliminarItemPedido{
@@ -1262,7 +1284,6 @@ box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 
 .cardOferta:hover {
   transform: scale(1.02);
-  cursor: grab;
 }
 
 .cardOferta:nth-child(2) {
@@ -1274,6 +1295,7 @@ box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .precio  {
+  color: black;
   display: flex;
   font-size: 40px;
   align-items: center;
@@ -1863,6 +1885,10 @@ h1 {
 }
 
 @media (max-width: 500px) {
+
+h1 {
+  font-size: 1.19rem;
+}
 
 
 .contact {
