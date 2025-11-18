@@ -124,7 +124,7 @@ function cargarCarrito(){
          if(itemClick.tagName == 'I'){
             const listaPedidos = JSON.parse(localStorage.getItem('carrito')) || [];
             for(let i=0; i<listaPedidos.length; i++){
-               if(listaPedidos[i].fechaPedido == itemClick.parentNode.parentNode.parentNode.querySelector('h3')?.id){
+               if(listaPedidos[i].fechaPedido == itemClick.parentNode.parentNode.querySelector('h3').id){
                   listaPedidos.splice(i, 1);
                }
          }
